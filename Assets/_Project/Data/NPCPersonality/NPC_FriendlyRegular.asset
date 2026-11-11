@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eddfe4db0ef63aa4789b1ef4ef007dcd, type: 3}
+  m_Name: NPC_FriendlyRegular
+  archetypeId: FriendlyRegular
+  archetypeName: "Kh\xE1ch quen d\u1EC5 th\u01B0\u01A1ng"
+  archetypeType: 6
+  personalityDescription: "\u1EE6ng h\u1ED9 qu\xE1n t\u1EEB \u0111\u1EA7u, d\u1EC5 t\xEDnh, th\xEDch tr\xF2 chuy\u1EC7n ch\xE0o h\u1ECFi v\u1EDBi ch\u1EE7 qu\xE1n."
+  idealWaitTimeSeconds: 40
+  maxWaitTimeSeconds: 160
+  waitDecayExponent: 1
+  strictnessAlpha: 0.7
+  satisfactionThreshold: 50
+  preferredFlavor:
+    sweetness: 0.6
+    bitterness: 0.6
+    creaminess: 0.5
+    aroma: 0.7
+    novelty: 0.1
+  tasteTolerance: 0.5
+  favoriteRecipeIds:
+  - Recipe_CaPheSua
+  - Recipe_BacXiu
+  expectedBudgetVND: 35000
+  priceSensitivityBeta: 0.8
+  weights:
+    speedWeight: 0.15
+    qualityWeight: 0.2
+    attitudeWeight: 0.35
+    hygieneWeight: 0.1
+    ambianceWeight: 0.1
+    priceWeight: 0.1
+  socialType: 1
+  baseReviewProbability: 0.45
+  reputationImpactMultiplier: 1.5
+  visitsToUnlockMiniQuest: 3
+  yarnDialogueNodeName: NPC_FriendlyRegular_Intro
+

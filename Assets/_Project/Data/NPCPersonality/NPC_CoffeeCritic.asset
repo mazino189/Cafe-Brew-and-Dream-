@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eddfe4db0ef63aa4789b1ef4ef007dcd, type: 3}
+  m_Name: NPC_CoffeeCritic
+  archetypeId: CoffeeCritic
+  archetypeName: "Chuy\xEAn gia th\u1EA9m \u0111\u1ECBnh c\xE0 ph\xEA"
+  archetypeType: 3
+  personalityDescription: "Y\xEAu c\u1EA7u chu\u1EA9n xác v\u1EC1 t\u1EF7 l\u1EC7 chi\u1EBFt xu\u1EA5t, gu v\u1ECB tinh t\u1EBF, \u0111\xE1nh gi\xE1 kh\u1EAFt khe nh\u01B0ng vi\u1EBFt b\xE0i chuy\xEAn nghi\u1EC7p."
+  idealWaitTimeSeconds: 45
+  maxWaitTimeSeconds: 150
+  waitDecayExponent: 1.1
+  strictnessAlpha: 2
+  satisfactionThreshold: 75
+  preferredFlavor:
+    sweetness: 0.2
+    bitterness: 0.9
+    creaminess: 0.2
+    aroma: 1
+    novelty: 0.6
+  tasteTolerance: 0.15
+  favoriteRecipeIds:
+  - Recipe_SpecialtyPourOver
+  - Recipe_EspressoSingle
+  expectedBudgetVND: 65000
+  priceSensitivityBeta: 0.3
+  weights:
+    speedWeight: 0.05
+    qualityWeight: 0.45
+    attitudeWeight: 0.15
+    hygieneWeight: 0.2
+    ambianceWeight: 0.1
+    priceWeight: 0.05
+  socialType: 0
+  baseReviewProbability: 0.9
+  reputationImpactMultiplier: 3
+  visitsToUnlockMiniQuest: 4
+  yarnDialogueNodeName: NPC_CoffeeCritic_Intro
+

@@ -1,0 +1,26 @@
+
+# Unity generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Bb]uild/
+[Bb]uilds/
+
+# IDE
+.vscode/
+.idea/
+.vs/
+
+# Generated solution files
+*.csproj
+*.sln
+*.user
+*.pidb
+*.booproj
+*.svclog
+
+# OS
+.DS_Store
+Thumbs.db

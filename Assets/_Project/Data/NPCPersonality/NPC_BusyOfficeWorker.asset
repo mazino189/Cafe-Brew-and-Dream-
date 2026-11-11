@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eddfe4db0ef63aa4789b1ef4ef007dcd, type: 3}
+  m_Name: NPC_BusyOfficeWorker
+  archetypeId: BusyOfficeWorker
+  archetypeName: "D\xE2n v\u0103n ph\xF2ng v\u1ED9i v\xE3"
+  archetypeType: 1
+  personalityDescription: "Mua c\xE0 ph\xEA s\xE1ng mang \u0111i, \u01B0u ti\xEAn t\u1ED1c \u0111\u1ED9 s\u1ED1 1, s\u1EB5n s\xE0ng tr\u1EA3 gi\xE1 cao n\u1EBFu ph\u1EE5c v\u1EE5 nhanh."
+  idealWaitTimeSeconds: 20
+  maxWaitTimeSeconds: 60
+  waitDecayExponent: 2
+  strictnessAlpha: 1.3
+  satisfactionThreshold: 65
+  preferredFlavor:
+    sweetness: 0.4
+    bitterness: 0.8
+    creaminess: 0.3
+    aroma: 0.8
+    novelty: 0.1
+  tasteTolerance: 0.3
+  favoriteRecipeIds:
+  - Recipe_CaPheDen
+  - Recipe_CaPheSua
+  expectedBudgetVND: 40000
+  priceSensitivityBeta: 0.6
+  weights:
+    speedWeight: 0.4
+    qualityWeight: 0.25
+    attitudeWeight: 0.15
+    hygieneWeight: 0.1
+    ambianceWeight: 0.05
+    priceWeight: 0.05
+  socialType: 1
+  baseReviewProbability: 0.25
+  reputationImpactMultiplier: 1.2
+  visitsToUnlockMiniQuest: 5
+  yarnDialogueNodeName: NPC_BusyOfficeWorker_Intro
+

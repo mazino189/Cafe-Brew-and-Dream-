@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=Quicksand:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+@keyframes floatUp {
+  0% { opacity: 0; transform: translateY(12px) scale(0.9); }
+  25% { opacity: 1; transform: translateY(-4px) scale(1.05); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+.animate-float-in { animation: floatUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+@keyframes pulseSubtle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+.animate-pulse-subtle { animation: pulseSubtle 1.8s ease-in-out infinite; }
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  15% { transform: scale(1.15); }
+  30% { transform: scale(1.05); }
+  45% { transform: scale(1.2); }
+}
+.animate-heartbeat { animation: heartbeat 0.8s infinite; }
+</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      "colors": {
+        "secondary-container": "#b8edb3",
+        "background": "#fff8f2",
+        "secondary-fixed-dim": "#9fd49b",
+        "on-secondary": "#ffffff",
+        "surface-variant": "#ebe1d3",
+        "amber-honey": "#E5A93C",
+        "secondary-fixed": "#baf0b6",
+        "primary": "#502c12",
+        "error-container": "#ffdad6",
+        "on-tertiary": "#ffffff",
+        "inverse-surface": "#353027",
+        "tertiary-fixed-dim": "#ffb68c",
+        "espresso-dark": "#2C1810",
+        "on-tertiary-fixed": "#321200",
+        "primary-container": "#6b4226",
+        "on-surface": "#1f1b13",
+        "on-primary-fixed-variant": "#653d22",
+        "tertiary": "#5a2600",
+        "on-background": "#1f1b13",
+        "milk-foam": "#FAF6F0",
+        "on-primary-container": "#e9b08c",
+        "on-tertiary-container": "#ffa873",
+        "surface-dim": "#e2d9cb",
+        "primary-fixed": "#ffdbc7",
+        "tertiary-fixed": "#ffdbc9",
+        "on-error-container": "#93000a",
+        "on-primary-fixed": "#311300",
+        "tertiary-container": "#7b3904",
+        "outline": "#83746c",
+        "surface-container-highest": "#ebe1d3",
+        "surface-tint": "#805437",
+        "outline-variant": "#d5c3b9",
+        "surface-container-lowest": "#ffffff",
+        "on-error": "#ffffff",
+        "secondary": "#39693b",
+        "surface-container-low": "#fcf2e4",
+        "error": "#ba1a1a",
+        "inverse-primary": "#f4ba96",
+        "danger-red": "#C84B31",
+        "on-surface-variant": "#51443d",
+        "primary-fixed-dim": "#f4ba96",
+        "surface-container-high": "#f1e7d9",
+        "on-secondary-fixed-variant": "#215025",
+        "surface-container": "#f7edde",
+        "on-secondary-fixed": "#002105",
+        "surface": "#fff8f2",
+        "on-secondary-container": "#3e6d3e",
+        "surface-bright": "#fff8f2",
+        "on-tertiary-fixed-variant": "#753400",
+        "on-primary": "#ffffff",
+        "inverse-on-surface": "#f9efe1"
+      },
+      "borderRadius": {
+        "DEFAULT": "0.25rem",
+        "lg": "0.5rem",
+        "xl": "0.75rem",
+        "full": "9999px"
+      },
+      "spacing": {
+        "margin-edge": "2rem",
+        "space-xl": "2rem",
+        "space-xs": "0.25rem",
+        "gutter": "1rem",
+        "space-md": "1rem",
+        "space-sm": "0.5rem",
+        "margin": "1.5rem",
+        "space-lg": "1.5rem",
+        "gutter-lg": "1.5rem"
+      },
+      "fontFamily": {
+        "display-hero": [
+          "Quicksand"
+        ],
+        "body-sm": [
+          "Be Vietnam Pro"
+        ],
+        "title-sm": [
+          "Be Vietnam Pro"
+        ],
+        "label-lg": [
+          "Be Vietnam Pro"
+        ],
+        "headline-md": [
+          "Quicksand"
+        ],
+        "title-md": [
+          "Be Vietnam Pro"
+        ],
+        "body-md": [
+          "Be Vietnam Pro"
+        ],
+        "body-lg": [
+          "Be Vietnam Pro"
+        ],
+        "headline-sm": [
+          "Quicksand"
+        ],
+        "label-md": [
+          "Be Vietnam Pro"
+        ],
+        "label-sm": [
+          "Be Vietnam Pro"
+        ],
+        "headline-lg": [
+          "Quicksand"
+        ]
+      },
+      "fontSize": {
+        "display-hero": [
+          "48px",
+          {
+            "lineHeight": "56px",
+            "letterSpacing": "-0.02em",
+            "fontWeight": "700"
+          }
+        ],
+        "body-sm": [
+          "12px",
+          {
+            "lineHeight": "16px",
+            "fontWeight": "400"
+          }
+        ],
+        "title-sm": [
+          "14px",
+          {
+            "lineHeight": "20px",
+            "fontWeight": "600"
+          }
+        ],
+        "label-lg": [
+          "14px",
+          {
+            "lineHeight": "20px",
+            "letterSpacing": "0.01em",
+            "fontWeight": "500"
+          }
+        ],
+        "headline-md": [
+          "24px",
+          {
+            "lineHeight": "32px",
+            "fontWeight": "600"
+          }
+        ],
+        "title-md": [
+          "16px",
+          {
+            "lineHeight": "24px",
+            "fontWeight": "600"
+          }
+        ],
+        "body-md": [
+          "14px",
+          {
+            "lineHeight": "20px",
+            "fontWeight": "400"
+          }
+        ],
+        "body-lg": [
+          "16px",
+          {
+            "lineHeight": "24px",
+            "fontWeight": "400"
+          }
+        ],
+        "headline-sm": [
+          "20px",
+          {
+            "lineHeight": "28px",
+            "fontWeight": "600"
+          }
+        ],
+        "label-md": [
+          "12px",
+          {
+            "lineHeight": "16px",
+            "letterSpacing": "0.02em",
+            "fontWeight": "500"
+          }
+        ],
+        "label-sm": [
+          "10px",
+          {
+            "lineHeight": "14px",
+            "letterSpacing": "0.04em",
+            "fontWeight": "600"
+          }
+        ],
+        "headline-lg": [
+          "32px",
+          {
+            "lineHeight": "40px",
+            "letterSpacing": "-0.01em",
+            "fontWeight": "700"
+          }
+        ]
+      }
+    }
+  }
+};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-low z-40 flex flex-col justify-between pt-16 pb-space-lg shadow-[0_1px_8px_rgba(44,24,16,0.06)]"><div class="px-space-md pt-space-md"><div class="px-space-md py-space-sm mb-space-md rounded-xl bg-surface-container flex items-center justify-between"><span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Chi nhánh #01</span><span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">Đang mở</span></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary-container text-on-primary font-title-sm"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-title-sm text-title-sm" data-path="pos-counter" href="#"><span class="material-symbols-outlined text-title-md">point_of_sale</span>Quầy Pha Chế</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-title-sm text-title-sm" data-path="inventory-storage" href="#"><span class="material-symbols-outlined text-title-md">inventory_2</span>Kho Nguyên Liệu</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-title-sm text-title-sm" data-path="cafe-upgrades" href="#"><span class="material-symbols-outlined text-title-md">store</span>Nâng Cấp Quán</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-title-sm text-title-sm" data-path="staff-management" href="#"><span class="material-symbols-outlined text-title-md">badge</span>Nhân Lực</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-title-sm text-title-sm" data-path="reviews-hype" href="#"><span class="material-symbols-outlined text-title-md">reviews</span>Quán Quen Review</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-title-sm text-title-sm" data-path="finance-ledger" href="#"><span class="material-symbols-outlined text-title-md">account_balance_wallet</span>Sổ Sách Thu Chi</a></nav></div><div class="px-space-md"><div class="p-space-md rounded-xl bg-surface-container flex items-center justify-between"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant">Tốc độ game</span><span class="font-title-sm text-title-sm text-primary">Bình thường 1x</span></div><button class="w-8 h-8 rounded-lg bg-surface-container-highest hover:bg-surface-container-high text-on-surface flex items-center justify-center transition-colors" type="button"><span class="material-symbols-outlined text-title-md">fast_forward</span></button></div></div></aside><div class="pl-64"><header class="fixed top-0 left-0 right-0 h-16 bg-surface/90 backdrop-blur-xl z-50 shadow-[0_1px_8px_rgba(44,24,16,0.06)]"><div class="h-16 w-full px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="Cozy hand-lettered stylized game title logo reading 'Brew &amp; Dream'. Warm coffee theme, cute stylized steaming Vietnamese phin coffee filter cup icon with coffee bean leaf accents, roasted coffee brown (#6B4226) and warm terracotta orange (#D9824B) tones, cream highlights, friendly rounded vintage cafe sign aesthetic.. Design context: - Primary color: #6b4226
+- Font: quicksand
+- Mode: light
+- Roundness: rounded-md
+. The logo should be visually consistent with these brand tokens." class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBVXmTqqVkw9W0gKQ4IG8QjV3_FXAw0MC_qOAb90iajyozjCcVSJusfbWpOHFxGBWmqeRpOdQPjyZi9FCr_iKoipiaolm1E1-wVU-njlJBdmZFHZqvkJWWCI6aQHs06ZqzIkVYhLxOuIRn-RTwzWYjJQcDlJ2WK3OWsWuKYr-v9UlXQ9vSuP6os7okvWJbc4Bwtjca_W-9_ITjxBQ1kxWgXeURRsZFTWxpucONme1PyMA"/><div class="h-5 w-px bg-outline-variant hidden sm:block"></div><span class="font-headline-sm text-headline-sm text-primary tracking-tight hidden sm:inline">Brew &amp; Dream</span></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-1.5 px-space-md py-1.5 rounded-full bg-surface-container-high shadow-[0_2px_4px_rgba(44,24,16,0.04)]"><span class="material-symbols-outlined text-primary text-title-md">schedule</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Ngày 12</span><span class="font-title-sm text-title-sm text-on-surface leading-tight">08:30 Sáng</span></div></div><div class="flex items-center gap-1.5 px-space-md py-1.5 rounded-full bg-surface-container-high shadow-[0_2px_4px_rgba(44,24,16,0.04)]"><span class="material-symbols-outlined text-secondary text-title-md">payments</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Ngân quỹ</span><span class="font-title-sm text-title-sm text-secondary font-bold leading-tight" id="header-budget">24.850.000đ</span></div></div><div class="flex items-center gap-1.5 px-space-md py-1.5 rounded-full bg-surface-container-high shadow-[0_2px_4px_rgba(44,24,16,0.04)]"><span class="material-symbols-outlined text-amber-honey text-title-md">star</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Danh tiếng</span><span class="font-title-sm text-title-sm text-on-surface font-bold leading-tight" id="header-reputation">4.8 / 5.0</span></div></div><div class="hidden md:flex items-center gap-1.5 px-space-md py-1.5 rounded-full bg-surface-container-high"><span class="material-symbols-outlined text-on-surface-variant text-title-md">wb_sunny</span><span class="font-title-sm text-title-sm text-on-surface">28°C Nắng ấm</span></div><div class="h-6 w-px bg-outline-variant hidden sm:block"></div><div class="flex items-center gap-space-sm"><button class="w-9 h-9 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" title="Tạm dừng" type="button"><span class="material-symbols-outlined text-title-md">pause</span></button><button class="w-9 h-9 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface-variant hover:text-on-surface flex items-center justify-center transition-colors" id="btn-global-audio" onclick="toggleAudio()" title="Cài đặt âm lượng" type="button"><span class="material-symbols-outlined text-title-md" id="icon-global-audio">volume_up</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></div></header><main class="relative pt-16 w-full min-h-screen bg-surface"><div class="flex flex-col w-full p-space-lg gap-space-lg">
+<!-- Top Notification & Outcome Summary Hero -->
+<div class="relative overflow-hidden rounded-2xl bg-surface-container-high p-space-lg shadow-md">
+<div class="absolute -right-12 -top-12 w-64 h-64 rounded-full bg-secondary-container/30 blur-2xl pointer-events-none"></div>
+<div class="absolute right-32 bottom-0 w-48 h-48 rounded-full bg-amber-honey/20 blur-xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col gap-space-md">
+<!-- Resolution Header Badge -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="inline-flex items-center gap-space-xs px-3 py-1 rounded-full bg-surface-container-highest shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse-subtle"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Sự Kiện Khép Lại • Giải Pháp Hòa Hoãn &amp; Dĩ Hòa Vi Quý</span>
+<span class="font-label-sm text-label-sm px-1.5 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-bold">#EV-01A</span>
+</div>
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-title-sm text-secondary">verified</span>
+<span>Đã ghi nhận vào lịch sử ca trực</span>
+</div>
+</div>
+<!-- Headline & Subtitle -->
+<div class="max-w-4xl">
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">
+          HÙNG NHẬN LY MỚI VÀ RỜI ĐI TRONG ÊM THẤM!
+        </h1>
+<p class="mt-space-xs font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+          Chủ quán giữ thái độ nhã nhặn, tự tay pha thêm ly Bạc Xỉu nhiều sữa đặc miễn phí. Dù chịu một khoản chi phí nhỏ và nhân viên thoáng hụt hẫng, nhưng khủng hoảng 1 sao đã được triệt tiêu hoàn toàn ngay tại quầy.
+        </p>
+</div>
+<!-- 3 Key Metric Badges -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md pt-space-xs">
+<div class="p-space-md rounded-xl bg-milk-foam shadow-sm flex items-center gap-space-sm transition-all hover:scale-[1.01]">
+<div class="w-12 h-12 rounded-xl bg-error-container text-on-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-headline-sm">payments</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Quỹ quán biến động</span>
+<span class="font-headline-sm text-headline-sm text-danger-red font-bold leading-tight">-35.000 đ</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Phí nguyên liệu ly mới</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-milk-foam shadow-sm flex items-center gap-space-sm transition-all hover:scale-[1.01]">
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-headline-sm">format_image_left</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Rủi ro bóc phốt mxh</span>
+<span class="font-headline-sm text-headline-sm text-secondary font-bold leading-tight">0% Đã Triệt Tiêu</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Ngăn chặn bão 1 sao</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-milk-foam shadow-sm flex items-center gap-space-sm transition-all hover:scale-[1.01]">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed text-on-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-headline-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate">Uy tín thương hiệu</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold leading-tight">4.8 / 5.0</span>
+<span class="font-body-sm text-body-sm text-secondary font-medium truncate">Giữ vững phong độ</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 2-Column Core Game Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Counter Outcome Report (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Section Header -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-1.5 h-6 rounded-full bg-primary"></span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Ghi Nhận Thực Tế Tại Quầy</h2>
+</div>
+<span class="font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant uppercase font-semibold">Hiện trường sau 5 phút</span>
+</div>
+<!-- Main Customer Resolution Card -->
+<div class="p-space-lg rounded-2xl bg-milk-foam shadow-md flex flex-col gap-space-md">
+<!-- Customer Profile Row -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="relative">
+<img class="w-16 h-16 rounded-xl object-cover shadow-sm bg-surface-container" data-alt="Stylized video game character avatar of Hung, a 38-year-old Vietnamese male office worker with neat slicked hair and a light blue rolled-up dress shirt, expression calming down from annoyance to relaxed neutral satisfaction, warm cafe interior lighting, cozy hand-drawn tycoon game aesthetic with warm coffee and caramel palette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJ-xfzX6TdSNaZan8fIltupCuN5CND0a88QqW5k1aLY1RKqr8z_i7qXaU34aoke24W_u_HUIEGYkZGiEGCaiXT-o-pheb46nmo66NeUo_CGU6EEt5qtHE6x1LCeR9ggAOWSO92vJfnOYNd7vSBeJQZOvTcXh0BXR7SuVah5t2wXGHQBYPdPYyrDVrsnjzHNplZeZDlUI07a_3JufsCmB1IXwREgu_Gp96906L5dlcb"/>
+<span class="absolute -bottom-1 -right-1 w-5 h-5 rounded-full bg-secondary text-on-secondary flex items-center justify-center text-[10px] font-bold">✓</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-title-md text-title-md text-on-surface">Hùng (38 tuổi)</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Khách Vãng Lai</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Uống tại chỗ • Ghé giờ cao điểm sáng</span>
+</div>
+</div>
+<!-- Silent Rating Tag -->
+<div class="px-3 py-1.5 rounded-xl bg-surface-container flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Đánh giá ngầm:</span>
+<div class="flex text-amber-honey text-title-sm">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px] text-outline-variant">star</span>
+<span class="material-symbols-outlined text-[16px] text-outline-variant">star</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">(3.0)</span>
+</div>
+</div>
+<!-- Anger / Patience Reduction Meter -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center justify-between font-label-md text-label-md">
+<span class="flex items-center gap-1 text-on-surface font-medium">
+<span class="material-symbols-outlined text-title-sm text-secondary">mood</span> Cảm xúc của khách
+            </span>
+<span class="text-secondary font-bold">Nộ khí: 85% ➔ 20% (Đã hạ nhiệt, nguôi ngoai)</span>
+</div>
+<div class="w-full h-3 rounded-full bg-surface-container-highest overflow-hidden relative">
+<div class="h-full rounded-full bg-gradient-to-r from-danger-red via-amber-honey to-secondary transition-all duration-700" style="width: 20%;"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Ban đầu: Cực kỳ bức xúc</span>
+<span>Hiện tại: Hài lòng vừa đủ</span>
+</div>
+</div>
+<!-- Hung's Departure Dialogue Chit -->
+<div class="relative p-space-md rounded-xl bg-surface-container-high shadow-sm">
+<span class="material-symbols-outlined text-on-surface-variant/30 text-headline-lg absolute top-2 right-3 pointer-events-none">format_quote</span>
+<p class="font-title-sm text-title-sm text-primary italic leading-relaxed">
+            «...Ừm, ly này uống mới vừa miệng này! Thôi thì biết lắng nghe khách thế là được, lần sau chú ý đừng để người ta phải nhắc!»
+          </p>
+<div class="mt-2 flex items-center gap-2 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-body-sm text-secondary">directions_walk</span>
+<span>Khách cầm ly Bạc Xỉu ra lấy xe máy, không để lại lời phàn nàn nào thêm.</span>
+</div>
+</div>
+</div>
+<!-- Bystanders & Witnesses Reaction Section -->
+<div class="p-space-lg rounded-2xl bg-milk-foam shadow-md flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h3 class="font-title-md text-title-md text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-title-md">group</span>
+            Phản Ứng Của Những Người Chứng Kiến
+          </h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2 nhân vật tương tác</span>
+</div>
+<!-- Witness 1: Regular Customer Chi Hanh -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col sm:flex-row items-start gap-space-md">
+<img class="w-14 h-14 rounded-xl object-cover shrink-0 bg-surface-container" data-alt="Charming 32-year-old Vietnamese woman patron named Chi Hanh wearing cozy linen clothing and delicate glasses, sipping drip iced coffee at a wooden cafe table, smiling with sympathetic understanding and respect, warm coffee shop simulation game character portrait style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ-x4bmg_hWGPxHKbk9Y4MZgAEV5EJALT8GBi68dC3MYeBop3Z2ko9_JETnJn5hb0le7iGLlDZkF25pbSDQvDw8zu9sZFP-4KXJiL0LnF4PoeMg7d59iNgsfGuNrDonv-JjilfLGu01leXgBJMS-WQyVepQq680GypvKMgFdwjfuwqh4TFw40v65Jrr-D8PpZ3ilfMqQ83Uzm0WKwXXlne_fwgVyanVorR8TAYYYG4"/>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex flex-wrap items-center justify-between gap-1">
+<div class="flex items-center gap-2">
+<span class="font-title-sm text-title-sm text-on-surface">Chị Hạnh</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">Khách Quen Bàn Số 3</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-bold">
+                +5 Thiện Cảm Khách Quen
+              </span>
+</div>
+<p class="mt-1 font-body-md text-body-md text-on-surface-variant italic">
+              «Thấy em nhẫn nhịn khách vô lý thế này vừa thương vừa nể. Nhưng làm dịch vụ nhiều khi một sự nhịn là chín sự lành em à.»
+            </p>
+<div class="mt-2 flex items-center gap-1 font-label-sm text-label-sm text-secondary font-medium">
+<span class="material-symbols-outlined text-body-sm">loyalty</span>
+<span>Đã thêm ghi chú: Khách quen ghi nhận sự văn minh của quán</span>
+</div>
+</div>
+</div>
+<!-- Witness 2: Assistant Barista Thao -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col sm:flex-row items-start gap-space-md">
+<img class="w-14 h-14 rounded-xl object-cover shrink-0 bg-surface-container" data-alt="Cute 20-year-old Vietnamese barista apprentice girl named Be Thao wearing a barista apron and dark green cap, looking slightly crestfallen but contemplative, gentle warm lighting inside a cozy artisan coffee bar, hand-drawn vector video game character art" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEHDtFe1L4iGg6ABGfsoc0-NXIaa6e84FQ-4uDEmwQHlDWnqNUEw0_YwdAPfgsinNJ6sFbjJ2qtkU0daIo2HaX1eGE4KcTHNgrJDJ8rsi_Tk-1GcRluniUsWyeOvX9HpEOuK-n_6HS4XJBB_cKYYe2OL-91bASbZtHv1Dq0UT_ew3Eyyx5Mzz4Mt-97ti-aqChmNphJ-82QsVcKcIWwc3dH9sSDZUvQq1Tja6xwzfe"/>
+<div class="flex flex-col flex-1 min-w-0">
+<div class="flex flex-wrap items-center justify-between gap-1">
+<div class="flex items-center gap-2">
+<span class="font-title-sm text-title-sm text-on-surface">Bé Thảo</span>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Phụ Pha Chế Ca Sáng</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-bold">
+                -5 Tinh Thần Tạm Thời
+              </span>
+</div>
+<p class="mt-1 font-body-md text-body-md text-on-surface-variant italic">
+              «Em thấy hơi buồn vì rõ ràng em đong chuẩn định lượng công thức của quán... Nhưng em hiểu anh muốn giữ êm ấm cho cả tiệm.»
+            </p>
+<div class="mt-2 flex items-center gap-1 font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-body-sm text-danger-red">info</span>
+<span>Trạng thái: Cần một lời trò chuyện khích lệ sau giờ giao ca</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Business Lessons & Uncle Sau's Advice (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Section Header -->
+<div class="flex items-center gap-space-sm">
+<span class="w-1.5 h-6 rounded-full bg-amber-honey"></span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Phân Tích Bài Học Kinh Doanh</h2>
+</div>
+<!-- Financial & Experience Ledger -->
+<div class="p-space-lg rounded-2xl bg-milk-foam shadow-md flex flex-col gap-space-md">
+<!-- Direct vs Avoided Loss Comparison -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-bold">Báo Cáo Thiệt Hại &amp; Giá Trị Tránh Được</span>
+<div class="grid grid-cols-2 gap-space-sm mt-1">
+<div class="p-space-sm rounded-xl bg-surface-container flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Tổn thất trực tiếp:</span>
+<span class="font-title-md text-title-md text-danger-red font-bold">-35.000 đ</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pha bù nguyên liệu</span>
+</div>
+<div class="p-space-sm rounded-xl bg-surface-container flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Chi phí PR khủng hoảng:</span>
+<span class="font-title-md text-title-md text-secondary font-bold">+0 đ</span>
+<span class="font-body-sm text-body-sm text-secondary font-medium">Tiết kiệm ~2.500.000 đ</span>
+</div>
+</div>
+</div>
+<!-- EXP Progression Progress Bar -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-title-sm text-primary">military_tech</span>
+<span class="font-title-sm text-title-sm text-on-surface font-semibold">Điểm Kinh Nghiệm</span>
+</div>
+<span class="font-title-sm text-title-sm text-secondary font-bold">+25 EXP Xử Lý Khủng Hoảng</span>
+</div>
+<div class="w-full h-2.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full rounded-full bg-primary-container transition-all duration-700" style="width: 68%;"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Cấp độ quản trị: Lv.3 (Chủ tiệm chu đáo)</span>
+<span>340 / 500 EXP</span>
+</div>
+</div>
+<!-- Newly Unlocked Passive Perk Card -->
+<div class="p-space-md rounded-xl bg-surface-container-high shadow-sm flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-xl bg-amber-honey/20 text-tertiary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-title-md">psychology</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm uppercase px-1.5 py-0.5 rounded bg-amber-honey text-on-surface font-bold">Kỹ Năng Mới</span>
+<span class="font-title-sm text-title-sm text-primary font-bold">Bậc Thầy Nhẫn Nại</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Tăng <strong class="text-secondary">10%</strong> tốc độ giải nhiệt cơn giận của khách khó tính trong tất cả các ca bán tương lai.
+            </p>
+</div>
+</div>
+</div>
+<!-- Uncle Sau's Advice Card -->
+<div class="p-space-lg rounded-2xl bg-milk-foam shadow-md flex flex-col gap-space-md relative overflow-hidden">
+<div class="flex items-start gap-space-sm">
+<img class="w-14 h-14 rounded-xl object-cover shrink-0 shadow-sm bg-surface-container" data-alt="Wise older Vietnamese mentor figure named Chu Sau with graying temples, warm crinkly smile, wearing a traditional beige linen shirt, sitting in an airy wooden porch with potted bonsai, representing sage advice and street wisdom in a cozy cafe tycoon game" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDg5c-8pcXmAQ-Er16QCH6UJ3B4xZErzj0C6t2EwVPyyZ7etP1PEH98Sdr4vjFFO8d26I91ADEaz9YeebmgUyzuSTaZ6SIJdAt6ej-RccfKa0XR8iSZaO11pKjfxMc3Qsu5O8LqHMZl4azZskdd0qIP0U6TE8OeHRl_bDcbavgTzFEqqcmGRy7V-VwmcIHCUcxxS9iVwZ4jtd3oZwoO4i8Bf3KDAo2lrRsH4RyXv41Q"/>
+<div class="flex flex-col">
+<span class="font-title-sm text-title-sm text-primary font-bold">Lời Khuyên Của Chú Sáu</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cố Vấn &amp; Chủ Phố Cũ</span>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-low relative">
+<p class="font-body-md text-body-md text-on-surface italic leading-relaxed">
+            «Làm nghề quán xá trăm người mười ý con ơi. Nhường khách một bước không phải là mình sai hay sợ hãi, mà là chọn sự bình yên để tiếp tục tập trung phục vụ những vị khách quý khác. Chi ra ba mươi lăm nghìn mà mua được sự êm ả cả ngày là một món hời lớn đấy!»
+          </p>
+</div>
+<!-- Next Recommended Managerial Action -->
+<div class="p-space-sm rounded-xl bg-surface-container flex items-start gap-2">
+<span class="material-symbols-outlined text-title-sm text-amber-honey shrink-0 mt-0.5">lightbulb</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Khuyến nghị bước tiếp:</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Nhớ động viên và bù đắp tinh thần cho bé Thảo phụ pha chế ở ca tối để nhân viên không ấm ức nhé!</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Pinned Action Bar -->
+<div class="sticky bottom-0 z-30 p-space-md rounded-2xl bg-surface/95 backdrop-blur-md shadow-lg flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<!-- Back / Inspect details -->
+<button class="px-space-md py-2.5 rounded-xl bg-milk-foam text-primary font-title-sm text-title-sm shadow-sm hover:bg-surface-container transition-all flex items-center gap-1.5" onclick="history.back()" type="button">
+<span class="material-symbols-outlined text-title-md">arrow_back</span>
+<span>Xem lại tình huống chọn phương án</span>
+</button>
+<!-- Center Live Status Indicator -->
+<div class="flex items-center gap-2 px-space-md py-1.5 rounded-full bg-surface-container shadow-inner">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse-subtle"></span>
+<span class="font-label-md text-label-md text-on-surface font-medium">Ca sáng tiếp tục an toàn • Không phát sinh sự cố truyền thông</span>
+</div>
+<!-- Right Primary CTA Button -->
+<button class="w-full sm:w-auto px-space-lg py-3 rounded-xl bg-[#D9824B] text-milk-foam font-title-md text-title-md font-bold shadow-[0_4px_10px_rgba(107,66,38,0.25)] transition-all hover:brightness-105 active:scale-95 flex items-center justify-center gap-2" type="button">
+<span>Tiếp Tục Ca Bán Trưa &amp; Chuẩn Bị Nhập Hàng</span>
+<span class="material-symbols-outlined text-title-md">arrow_forward</span>
+</button>
+</div>
+</div></main></div></body></html>

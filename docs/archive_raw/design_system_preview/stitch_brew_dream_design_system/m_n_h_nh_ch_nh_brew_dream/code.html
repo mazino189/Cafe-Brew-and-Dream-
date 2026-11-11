@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Brew &amp; Dream - Khởi Nghiệp Cà Phê Việt</title>
+<!-- Google Fonts: Quicksand & Be Vietnam Pro -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=Quicksand:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- FontAwesome Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            coffee: {
+              DEFAULT: '#6B4226',
+              dark: '#4A2B15',
+              light: '#8E5A35',
+            },
+            terracotta: {
+              DEFAULT: '#D9824B',
+              hover: '#C26D37',
+              dark: '#B85E28',
+            },
+            cream: {
+              DEFAULT: '#F5EBDD',
+              light: '#FAF4EC',
+              dark: '#E7D8C4',
+            },
+            leaf: {
+              DEFAULT: '#5B8C5A',
+              dark: '#456E44',
+            }
+          },
+          fontFamily: {
+            sans: ['"Be Vietnam Pro"', 'Quicksand', 'sans-serif'],
+            display: ['Quicksand', '"Be Vietnam Pro"', 'sans-serif'],
+          },
+          boxShadow: {
+            'cozy': '0 8px 24px -4px rgba(44, 24, 16, 0.4), 0 2px 6px -1px rgba(44, 24, 16, 0.2)',
+            'cozy-lg': '0 16px 36px -6px rgba(44, 24, 16, 0.5), 0 4px 12px -2px rgba(44, 24, 16, 0.3)',
+            'wooden-inset': 'inset 0 2px 4px rgba(255,255,255,0.25), inset 0 -3px 6px rgba(0,0,0,0.3)',
+          }
+        }
+      }
+    }
+  </script>
+<!-- BEGIN: Custom Styling -->
+<style data-purpose="custom-animations">
+    @keyframes gentle-pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+    }
+    @keyframes subtle-float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-4px); }
+    }
+    .animate-gentle-pulse {
+      animation: gentle-pulse 3.5s ease-in-out infinite;
+    }
+    .animate-subtle-float {
+      animation: subtle-float 4s ease-in-out infinite;
+    }
+  </style>
+<style data-purpose="ui-textures">
+    .paper-texture {
+      background-color: #FAF4EC;
+      background-image: radial-gradient(#E8DAC6 1px, transparent 0);
+      background-size: 16px 16px;
+    }
+    .wood-card-border {
+      border: 2px solid #8E5A35;
+      box-shadow: 0 4px 14px rgba(44, 24, 16, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.4);
+    }
+    .text-glow {
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+<!-- END: Custom Styling -->
+</head>
+<body class="h-full w-full overflow-hidden select-none bg-stone-900 font-sans text-stone-800 antialiased">
+<!-- BEGIN: GameViewportContainer -->
+<!-- Designed for 16:9 landscape aspect ratio presentation -->
+<div class="relative w-full h-full min-h-screen flex items-center justify-center overflow-hidden bg-black" data-purpose="viewport-wrapper">
+<!-- Background Illustration with warm vignette overlay -->
+<div class="absolute inset-0 w-full h-full" data-purpose="game-background">
+<img alt="Stylized cozy Vietnamese coffee shop storefront at dusk with lanterns and warm glowing interior" class="w-full h-full object-cover object-center pointer-events-none transform scale-[1.01]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD82Z-BMNIJOJda_JUZ_fdkyxF0CIDdu692bkTgAUZRQ1-rxF1DYGulA8nC2CrSNWJQUuj_dWVZX2bm_22g9OYV0v9NsKLEL8S5_JJ_1YdxdYuaiIxSJbKn6e10AnD7eFy8qVoA9ENFpy-CKK42WrMTugOcJK2YbjDS2zPltnF7wOyF4D6yMQ7-z7JtgupgfjNHiXEH0pK6W_vo0rPzpDSIF2T9D-OxBvuiWqOSc4Sj"/>
+<!-- Ambient Lighting & Readability Overlays -->
+<!-- Left side darkening for UI contrast -->
+<div class="absolute inset-0 bg-gradient-to-r from-stone-950/85 via-stone-950/50 to-transparent pointer-events-none"></div>
+<!-- Soft bottom gradient for footer bars -->
+<div class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-stone-950/30 pointer-events-none"></div>
+<!-- Subtle warm cinematic amber tone -->
+<div class="absolute inset-0 bg-amber-950/15 mix-blend-color-burn pointer-events-none"></div>
+</div>
+<!-- BEGIN: MainUserInterfaceLayer -->
+<main class="relative z-10 w-full h-full max-w-[1920px] max-h-[1080px] p-8 md:p-12 lg:p-14 flex flex-col justify-between" data-purpose="main-hud">
+<!-- BEGIN: TopSection -->
+<header class="flex items-start justify-between w-full" data-purpose="game-header">
+<!-- Logo and Branding Card -->
+<div class="flex items-center gap-5 group cursor-default" data-purpose="brand-container">
+<!-- Circular Badge Logo Container -->
+<div class="relative w-28 h-28 md:w-32 md:h-32 rounded-full p-1.5 bg-gradient-to-b from-amber-300 via-coffee to-amber-950 shadow-cozy-lg wood-card-border animate-subtle-float">
+<div class="w-full h-full rounded-full overflow-hidden bg-cream flex items-center justify-center border-2 border-amber-200/50 shadow-inner">
+<img alt="Brew &amp; Dream Logo" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgVkdMeztmvqwYZd3uhdM7K6lfgT6WKQmhw0Hdwwp7MrDRjFuyxuQsHZGOF4QXepaGTT81IJJjq6L6i8Hk62k_UP5umygN0nsdOfTs9ck-EokZQ8UDH51UiPS6fFGXap6XI6KlvWDaEV7ox5a3RGg1aaSzrf55xi5ITOuHylBobQe_UlGczGWqOWdxCd56Qi6CjlGs5E8wm26_gRPLeneGi32fKAH0eZOuGMn88CUW"/>
+</div>
+<!-- Decorative Badge Indicator -->
+<span class="absolute -bottom-2 right-1 bg-leaf text-cream-light font-display text-xs font-bold px-2.5 py-0.5 rounded-full shadow-md border border-cream/50 uppercase tracking-wide">
+              Bản Alpha
+            </span>
+</div>
+<!-- Title & Subtitle Badge -->
+<div class="flex flex-col">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-stone-900/60 backdrop-blur-md border border-amber-500/30 w-fit mb-1 shadow-sm">
+<i class="fa-solid fa-mug-hot text-terracotta text-sm"></i>
+<span class="text-xs tracking-wider uppercase font-semibold text-amber-200/90 font-display">Mô phỏng kinh doanh</span>
+</div>
+<h1 class="text-3xl md:text-4xl font-display font-extrabold text-white tracking-wide drop-shadow-md">
+              Brew &amp; Dream
+            </h1>
+<p class="text-sm md:text-base font-medium text-amber-100/80 max-w-md text-glow">
+              Trò chơi mô phỏng khởi nghiệp cà phê &amp; đồ uống Việt
+            </p>
+</div>
+</div>
+<!-- Top Right Mini Status Bar (In-game Time & Weather Ambience) -->
+<div class="hidden sm:flex items-center gap-4 bg-stone-900/70 backdrop-blur-md px-4 py-2 rounded-xl border border-amber-700/40 shadow-cozy" data-purpose="time-weather-widget">
+<div class="flex items-center gap-2 text-amber-300">
+<i class="fa-solid fa-cloud-moon text-lg"></i>
+<span class="text-sm font-semibold text-cream">18:30 • Hoàng hôn</span>
+</div>
+<div class="w-px h-5 bg-stone-700"></div>
+<div class="flex items-center gap-2 text-amber-400">
+<i class="fa-solid fa-temperature-half text-sm"></i>
+<span class="text-sm text-amber-100 font-medium">28°C Sài Gòn</span>
+</div>
+</div>
+</header>
+<!-- END: TopSection -->
+<!-- BEGIN: LeftMenuStack -->
+<!-- Vertical Action Menu designed like warm handcrafted cafe recipe boards -->
+<section class="flex flex-col gap-3.5 my-auto max-w-xs md:max-w-sm w-full py-4" data-purpose="main-menu-navigation">
+<!-- 1. Primary CTA: Chơi mới -->
+<button class="group relative flex items-center justify-between w-full px-6 py-4 rounded-xl font-display font-bold text-white bg-gradient-to-r from-terracotta to-[#E28F58] hover:from-terracotta-hover hover:to-terracotta shadow-cozy-lg border-2 border-amber-300/40 transform hover:-translate-y-1 hover:shadow-2xl transition-all duration-200 overflow-hidden active:translate-y-0" data-purpose="menu-btn-play-new" type="button">
+<!-- Shiny wood grain accent sheen -->
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 pointer-events-none"></div>
+<div class="flex items-center gap-4 z-10">
+<div class="w-10 h-10 rounded-lg bg-amber-950/30 flex items-center justify-center text-amber-100 shadow-inner">
+<i class="fa-solid fa-play text-lg transition-transform group-hover:scale-110"></i>
+</div>
+<div class="text-left">
+<span class="block text-xl tracking-wide">Chơi mới</span>
+<span class="block text-xs font-normal text-amber-100/90 font-sans">Mở quán đầu tiên của bạn</span>
+</div>
+</div>
+<i class="fa-solid fa-arrow-right text-amber-200/70 group-hover:text-white group-hover:translate-x-1 transition-all z-10"></i>
+</button>
+<!-- 2. Secondary CTA: Tiếp tục -->
+<button class="group relative flex items-center justify-between w-full px-6 py-3.5 rounded-xl font-display font-bold paper-texture text-coffee wood-card-border hover:bg-cream-light hover:border-amber-600 shadow-cozy transform hover:-translate-y-0.5 transition-all duration-200 active:translate-y-0" data-purpose="menu-btn-continue" type="button">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-lg bg-coffee/10 flex items-center justify-center text-coffee shadow-sm">
+<i class="fa-solid fa-forward-step text-lg group-hover:scale-110 transition-transform"></i>
+</div>
+<div class="text-left">
+<span class="block text-lg tracking-wide text-coffee">Tiếp tục</span>
+<span class="block text-xs font-semibold text-leaf font-sans">
+<i class="fa-solid fa-shop text-[10px] mr-1"></i>Ngày 14 - Quán nhỏ Chợ Cũ
+              </span>
+</div>
+</div>
+<span class="text-xs px-2.5 py-1 rounded bg-coffee/10 text-coffee-dark font-sans font-semibold">Lưu tự động</span>
+</button>
+<!-- 3. Tertiary: Cài đặt -->
+<button class="group flex items-center justify-between w-full px-6 py-3.5 rounded-xl font-display font-semibold text-stone-100 bg-stone-900/80 hover:bg-stone-800/90 backdrop-blur-md border border-stone-700/80 shadow-cozy transform hover:-translate-y-0.5 hover:border-amber-600/50 transition-all duration-200" data-purpose="menu-btn-settings" type="button">
+<div class="flex items-center gap-4">
+<div class="w-9 h-9 rounded-lg bg-stone-800/90 flex items-center justify-center text-amber-400">
+<i class="fa-solid fa-sliders text-base group-hover:rotate-45 transition-transform duration-300"></i>
+</div>
+<div class="text-left">
+<span class="block text-base tracking-wide text-stone-100">Cài đặt</span>
+<span class="block text-xs font-normal text-stone-400 font-sans">Âm thanh, hình ảnh &amp; điều khiển</span>
+</div>
+</div>
+<i class="fa-solid fa-chevron-right text-stone-500 group-hover:text-amber-400 text-sm transition-colors"></i>
+</button>
+<!-- 4. Quaternary: Thành tựu & Hồ sơ -->
+<button class="group flex items-center justify-between w-full px-6 py-3.5 rounded-xl font-display font-semibold text-stone-100 bg-stone-900/80 hover:bg-stone-800/90 backdrop-blur-md border border-stone-700/80 shadow-cozy transform hover:-translate-y-0.5 hover:border-amber-600/50 transition-all duration-200" data-purpose="menu-btn-achievements" type="button">
+<div class="flex items-center gap-4">
+<div class="w-9 h-9 rounded-lg bg-stone-800/90 flex items-center justify-center text-amber-400">
+<i class="fa-solid fa-trophy text-base group-hover:scale-110 transition-transform"></i>
+</div>
+<div class="text-left">
+<span class="block text-base tracking-wide text-stone-100">Thành tựu &amp; Hồ sơ</span>
+<span class="block text-xs font-normal text-stone-400 font-sans">12/48 công thức đã mở khóa</span>
+</div>
+</div>
+<span class="inline-flex items-center justify-center px-2 py-0.5 text-xs font-bold text-amber-900 bg-amber-400/90 rounded-md">25%</span>
+</button>
+<!-- 5. Quinary: Thoát game -->
+<button class="group flex items-center justify-between w-full px-6 py-3 rounded-xl font-display font-medium text-stone-300 bg-stone-950/70 hover:bg-stone-900/90 hover:text-red-300 backdrop-blur-sm border border-stone-800 hover:border-red-900/50 transition-all duration-200 mt-1" data-purpose="menu-btn-exit" type="button">
+<div class="flex items-center gap-4">
+<div class="w-8 h-8 rounded-lg bg-stone-900 flex items-center justify-center text-stone-400 group-hover:text-red-400 transition-colors">
+<i class="fa-solid fa-door-open text-sm"></i>
+</div>
+<span class="text-sm tracking-wide">Thoát game</span>
+</div>
+<i class="fa-solid fa-power-off text-xs text-stone-600 group-hover:text-red-400 transition-colors"></i>
+</button>
+</section>
+<!-- END: LeftMenuStack -->
+<!-- BEGIN: BottomStatusBar -->
+<footer class="w-full flex flex-col md:flex-row items-center justify-between gap-4 pt-4 border-t border-amber-900/30 text-xs text-cream/70" data-purpose="hud-bottom-bar">
+<!-- Bottom-left: Active Profile & Fund Indicator -->
+<div class="flex items-center gap-3 bg-stone-900/80 backdrop-blur-md px-4 py-2.5 rounded-xl border border-stone-700/60 shadow-md" data-purpose="active-profile-card">
+<div class="w-7 h-7 rounded-full bg-coffee flex items-center justify-center text-amber-200 border border-amber-400/40">
+<i class="fa-solid fa-user text-xs"></i>
+</div>
+<div class="flex items-center gap-2 text-sm">
+<span class="text-stone-300 font-medium">Quản lý:</span>
+<span class="text-amber-300 font-semibold font-display">Minh Khoa</span>
+<span class="text-stone-500">•</span>
+<span class="text-stone-300 font-medium">Vốn:</span>
+<span class="text-emerald-400 font-bold tracking-wide font-mono">100.000.000 đ</span>
+</div>
+</div>
+<!-- Bottom-right: Version, Credits & Quick Action Buttons -->
+<div class="flex items-center gap-4 flex-wrap justify-end" data-purpose="status-and-toggles">
+<!-- Made with love badge -->
+<div class="hidden lg:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-stone-900/60 backdrop-blur-xs border border-stone-800 text-stone-300">
+<span>Made with love for Vietnamese Coffee Culture ☕</span>
+</div>
+<!-- Quick Audio / Sound Toggle with wooden frame styling -->
+<div class="flex items-center gap-2">
+<button class="w-9 h-9 rounded-full bg-stone-800 hover:bg-stone-700 text-amber-300 border-2 border-amber-800/80 shadow flex items-center justify-center transition-all hover:scale-105 active:scale-95" data-purpose="audio-toggle-btn" title="Nhạc nền: Bật" type="button">
+<i class="fa-solid fa-music text-xs"></i>
+</button>
+<button class="w-9 h-9 rounded-full bg-stone-800 hover:bg-stone-700 text-amber-300 border-2 border-amber-800/80 shadow flex items-center justify-center transition-all hover:scale-105 active:scale-95" data-purpose="sfx-toggle-btn" title="Hiệu ứng âm thanh: Bật" type="button">
+<i class="fa-solid fa-volume-high text-xs"></i>
+</button>
+</div>
+<!-- Version Stamp -->
+<div class="px-3 py-1 rounded-md bg-stone-950/70 border border-stone-800 text-stone-400 font-mono text-[11px]" data-purpose="version-badge">
+            Phiên bản v0.1 (Early Alpha Build)
+          </div>
+</div>
+</footer>
+<!-- END: BottomStatusBar -->
+</main>
+<!-- END: MainUserInterfaceLayer -->
+</div>
+<!-- END: GameViewportContainer -->
+<!-- BEGIN: Interactive Feedback Scripts -->
+<script data-purpose="audio-and-ui-interactions">
+    document.addEventListener('DOMContentLoaded', () => {
+      // Audio toggle button visual feedback
+      const audioBtn = document.querySelector('[data-purpose="audio-toggle-btn"]');
+      let audioEnabled = true;
+      if (audioBtn) {
+        audioBtn.addEventListener('click', () => {
+          audioEnabled = !audioEnabled;
+          const icon = audioBtn.querySelector('i');
+          if (audioEnabled) {
+            icon.className = 'fa-solid fa-music text-xs';
+            audioBtn.classList.remove('opacity-60', 'text-stone-500');
+            audioBtn.classList.add('text-amber-300');
+          } else {
+            icon.className = 'fa-solid fa-music-slash text-xs';
+            audioBtn.classList.add('opacity-60', 'text-stone-500');
+            audioBtn.classList.remove('text-amber-300');
+          }
+        });
+      }
+
+      // Exit button confirmation mock
+      const exitBtn = document.querySelector('[data-purpose="menu-btn-exit"]');
+      if (exitBtn) {
+        exitBtn.addEventListener('click', () => {
+          const confirmed = confirm('Bạn có chắc muốn tạm dừng phiên pha chế và thoát game?');
+          if (confirmed) {
+            console.log('User exited game simulation.');
+          }
+        });
+      }
+    });
+  </script>
+<!-- END: Interactive Feedback Scripts -->
+</body></html>

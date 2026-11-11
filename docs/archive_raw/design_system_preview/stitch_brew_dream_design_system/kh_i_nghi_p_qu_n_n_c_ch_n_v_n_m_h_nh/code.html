@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+
+<html class="h-full" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Brew &amp; Dream - Khởi Nghiệp Cà Phê Việt</title>
+<!-- Google Fonts: Quicksand & Be Vietnam Pro -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=Quicksand:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- FontAwesome Icons -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            coffee: {
+              DEFAULT: '#6B4226',
+              dark: '#4A2B15',
+              light: '#8E5A35',
+            },
+            terracotta: {
+              DEFAULT: '#D9824B',
+              hover: '#C26D37',
+              dark: '#B85E28',
+            },
+            cream: {
+              DEFAULT: '#F5EBDD',
+              light: '#FAF4EC',
+              dark: '#E7D8C4',
+            },
+            leaf: {
+              DEFAULT: '#5B8C5A',
+              dark: '#456E44',
+            }
+          },
+          fontFamily: {
+            sans: ['"Be Vietnam Pro"', 'Quicksand', 'sans-serif'],
+            display: ['Quicksand', '"Be Vietnam Pro"', 'sans-serif'],
+          },
+          boxShadow: {
+            'cozy': '0 8px 24px -4px rgba(44, 24, 16, 0.4), 0 2px 6px -1px rgba(44, 24, 16, 0.2)',
+            'cozy-lg': '0 16px 36px -6px rgba(44, 24, 16, 0.5), 0 4px 12px -2px rgba(44, 24, 16, 0.3)',
+            'wooden-inset': 'inset 0 2px 4px rgba(255,255,255,0.25), inset 0 -3px 6px rgba(0,0,0,0.3)',
+          }
+        }
+      }
+    }
+  </script>
+<!-- BEGIN: Custom Styling -->
+<style data-purpose="custom-animations">
+    @keyframes gentle-pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+    }
+    @keyframes subtle-float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-4px); }
+    }
+    .animate-gentle-pulse {
+      animation: gentle-pulse 3.5s ease-in-out infinite;
+    }
+    .animate-subtle-float {
+      animation: subtle-float 4s ease-in-out infinite;
+    }
+  </style>
+<style data-purpose="ui-textures">
+    .paper-texture {
+      background-color: #FAF4EC;
+      background-image: radial-gradient(#E8DAC6 1px, transparent 0);
+      background-size: 16px 16px;
+    }
+    .wood-card-border {
+      border: 2px solid #8E5A35;
+      box-shadow: 0 4px 14px rgba(44, 24, 16, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.4);
+    }
+    .text-glow {
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+<!-- END: Custom Styling -->
+<meta content="web_standard" name="shell-type"/></head>
+<body class="h-full w-full overflow-hidden select-none bg-stone-900 font-sans text-stone-800 antialiased">
+<!-- BEGIN: GameViewportContainer -->
+<!-- Designed for 16:9 landscape aspect ratio presentation -->
+<div class="relative w-full h-full min-h-screen flex items-center justify-center overflow-hidden bg-black" data-purpose="viewport-wrapper">
+<!-- Background Illustration with warm vignette overlay -->
+<div class="absolute inset-0 w-full h-full" data-purpose="game-background">
+<img alt="Stylized cozy Vietnamese coffee shop storefront at dusk with lanterns and warm glowing interior" class="w-full h-full object-cover object-center pointer-events-none transform scale-[1.01]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD82Z-BMNIJOJda_JUZ_fdkyxF0CIDdu692bkTgAUZRQ1-rxF1DYGulA8nC2CrSNWJQUuj_dWVZX2bm_22g9OYV0v9NsKLEL8S5_JJ_1YdxdYuaiIxSJbKn6e10AnD7eFy8qVoA9ENFpy-CKK42WrMTugOcJK2YbjDS2zPltnF7wOyF4D6yMQ7-z7JtgupgfjNHiXEH0pK6W_vo0rPzpDSIF2T9D-OxBvuiWqOSc4Sj"/>
+<!-- Ambient Lighting & Readability Overlays -->
+<!-- Left side darkening for UI contrast -->
+<div class="absolute inset-0 bg-gradient-to-r from-stone-950/85 via-stone-950/50 to-transparent pointer-events-none"></div>
+<!-- Soft bottom gradient for footer bars -->
+<div class="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-stone-950/30 pointer-events-none"></div>
+<!-- Subtle warm cinematic amber tone -->
+<div class="absolute inset-0 bg-amber-950/15 mix-blend-color-burn pointer-events-none"></div>
+</div>
+<!-- BEGIN: MainUserInterfaceLayer -->
+<main class="relative z-10 w-full h-full max-w-[1920px] max-h-[1080px] p-8 md:p-12 lg:p-14 flex flex-col justify-between" data-purpose="main-hud"><div class="flex flex-col w-full h-full justify-between select-none">
+<!-- Top HUD Bar: Header & Progression Track -->
+<header class="w-full flex items-center justify-between pb-3">
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 px-4 py-2 rounded-xl bg-surface-container/90 text-primary hover:bg-surface-container-high transition-all shadow-sm active:translate-y-0.5 cursor-pointer" type="button">
+<span class="material-symbols-outlined text-lg">arrow_back</span>
+<span class="font-title-sm text-title-sm">Quay lại Menu</span>
+</button>
+<div class="h-8 w-px bg-outline-variant/40"></div>
+<!-- Game Identity Mini & Title -->
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-lowest p-1 shadow-sm flex items-center justify-center">
+<img alt="Logo Brew &amp; Dream" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBVXmTqqVkw9W0gKQ4IG8QjV3_FXAw0MC_qOAb90iajyozjCcVSJusfbWpOHFxGBWmqeRpOdQPjyZi9FCr_iKoipiaolm1E1-wVU-njlJBdmZFHZqvkJWWCI6aQHs06ZqzIkVYhLxOuIRn-RTwzWYjJQcDlJ2WK3OWsWuKYr-v9UlXQ9vSuP6os7okvWJbc4Bwtjca_W-9_ITjxBQ1kxWgXeURRsZFTWxpucONme1PyMA"/>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h1 class="font-headline-md text-headline-md text-milk-foam tracking-tight drop-shadow-md">Khởi nghiệp quán nước</h1>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm shadow-sm">GIAI ĐOẠN 1</span>
+</div>
+<p class="font-body-sm text-body-sm text-surface-container-low/90">Bước 1/2: Thiết lập ngân sách &amp; lựa chọn mô hình kinh doanh khởi đầu</p>
+</div>
+</div>
+</div>
+<!-- Live Simulation Indicator & Step Breadcrumbs -->
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-3 bg-surface-container/90 px-4 py-2 rounded-2xl shadow-sm">
+<div class="flex flex-col items-end">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Tiến trình</span>
+<span class="font-title-sm text-title-sm text-primary font-bold">50% Hoàn thành</span>
+</div>
+<div class="w-24 h-2.5 bg-surface-dim rounded-full overflow-hidden">
+<div class="h-full w-1/2 bg-secondary rounded-full"></div>
+</div>
+</div>
+<div class="flex items-center gap-1.5 text-milk-foam/80">
+<span class="w-7 h-7 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-md text-label-md font-bold">1</span>
+<span class="w-5 h-0.5 bg-milk-foam/40"></span>
+<span class="w-7 h-7 rounded-full bg-surface-container/80 text-on-surface-variant flex items-center justify-center font-label-md text-label-md">2</span>
+</div>
+</div>
+</header>
+<!-- Central Gameplay Setup Matrix: Fixed 16:9 Balanced Layout -->
+<section class="flex-1 flex flex-col justify-center gap-5 my-auto max-h-[820px]">
+<!-- SECTION 1: Capital Difficulty Selection (3 Horizontal Cards) -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-lg bg-primary text-on-primary flex items-center justify-center font-title-sm text-title-sm">1</span>
+<h2 class="font-headline-sm text-headline-sm text-milk-foam drop-shadow">Chọn số vốn ban đầu</h2>
+<span class="font-body-sm text-body-sm text-surface-container-high/90 ml-1">(Độ khó ảnh hưởng tới hệ số điểm danh tiếng)</span>
+</div>
+<div class="flex items-center gap-1 text-amber-honey font-label-sm text-label-sm bg-espresso-dark/70 px-3 py-1 rounded-full shadow-sm">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">info</span>
+<span>Vốn càng ít, điểm thưởng sinh lời càng cao</span>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-4" id="capital-cards-grid">
+<!-- Card 1: 30 Triệu - Khó -->
+<div class="capital-card group relative cursor-pointer bg-surface-container-low/95 hover:bg-surface-container-lowest rounded-2xl p-4 transition-all duration-200 shadow-md hover:-translate-y-1" data-capital="30" data-level="Khó" data-mult="x2.0">
+<div class="flex items-start justify-between mb-2">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-xl">payments</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-primary font-bold">30 triệu – Khó</h3>
+<span class="font-label-sm text-label-sm text-danger-red font-semibold">Thắt lưng buộc bụng</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-lg bg-amber-honey/20 text-tertiary-container font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-xs">stars</span> x2.0 Thưởng
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Áp lực tài chính cao, quay vòng vốn từng ngày. Dành cho người thích thử thách khắt khe.</p>
+<div class="mt-3 pt-2.5 border-t border-outline-variant/30 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Rủi ro phá sản: <strong class="text-danger-red">Cao</strong></span>
+<span class="text-primary font-semibold">Tự do vận hành</span>
+</div>
+</div>
+<!-- Card 2: 100 Triệu - Vừa (Default Selected) -->
+<div class="capital-card group relative cursor-pointer bg-surface-container-lowest rounded-2xl p-4 transition-all duration-200 shadow-xl ring-4 ring-secondary -translate-y-1" data-capital="100" data-level="Vừa" data-mult="x1.5">
+<div class="absolute -top-3 right-4 px-3 py-0.5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-md">
+<span class="material-symbols-outlined text-xs">check_circle</span> Khuyên dùng
+          </div>
+<div class="flex items-start justify-between mb-2">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-xl bg-secondary-fixed text-secondary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-xl">account_balance_wallet</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-primary font-bold">100 triệu – Vừa</h3>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Đề xuất hoàn hảo</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-lg bg-amber-honey/30 text-tertiary-container font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-xs">stars</span> x1.5 Thưởng
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Cân bằng lý tưởng giữa rủi ro và trải nghiệm phát triển quán. Phù hợp nhất cho người mới bắt đầu.</p>
+<div class="mt-3 pt-2.5 border-t border-outline-variant/30 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Rủi ro phá sản: <strong class="text-amber-honey">Trung bình</strong></span>
+<span class="text-secondary font-semibold">Dễ tiếp cận</span>
+</div>
+</div>
+<!-- Card 3: 300 Triệu - Dễ -->
+<div class="capital-card group relative cursor-pointer bg-surface-container-low/95 hover:bg-surface-container-lowest rounded-2xl p-4 transition-all duration-200 shadow-md hover:-translate-y-1" data-capital="300" data-level="Dễ" data-mult="x1.0">
+<div class="flex items-start justify-between mb-2">
+<div class="flex items-center gap-2.5">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-xl">savings</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-primary font-bold">300 triệu – Dễ</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Nhà đầu tư dồi dào</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-lg bg-surface-dim text-on-surface-variant font-label-sm text-label-sm font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">stars</span> x1.0 Điểm
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Dư dả sắm máy pha cà phê cao cấp, nguyên liệu xịn ngay từ ngày đầu mà không lo hụt dòng tiền.</p>
+<div class="mt-3 pt-2.5 border-t border-outline-variant/30 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Rủi ro phá sản: <strong class="text-secondary">Rất thấp</strong></span>
+<span class="text-primary font-semibold">Đầu tư thảnh thơi</span>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 2: Shop Operating Models Comparison (2 Detailed Split Panels) -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-6 h-6 rounded-lg bg-primary text-on-primary flex items-center justify-center font-title-sm text-title-sm">2</span>
+<h2 class="font-headline-sm text-headline-sm text-milk-foam drop-shadow">Chọn mô hình vận hành ban đầu</h2>
+<span class="font-body-sm text-body-sm text-surface-container-high/90 ml-1">(Định hình cách khách tương tác và tốc độ phục vụ)</span>
+</div>
+<span class="text-milk-foam/80 font-body-sm text-body-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">touch_app</span> Bấm chọn mô hình để áp dụng
+        </span>
+</div>
+<div class="grid grid-cols-2 gap-5" id="model-cards-grid">
+<!-- Model 1: Xe Nước Lề Đường (Street Cart) -->
+<div class="model-card group cursor-pointer relative rounded-2xl bg-surface-container-low/95 hover:bg-surface-container-lowest p-5 transition-all duration-200 shadow-lg flex flex-col justify-between" data-model="cart" data-name="Xe nước lề đường" data-rent="1.500.000 đ/tháng">
+<div>
+<!-- Header of Card -->
+<div class="flex items-start justify-between pb-3 border-b border-outline-variant/30">
+<div class="flex items-center gap-3">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-highest text-tertiary-container flex items-center justify-center shadow-inner">
+<span class="material-symbols-outlined text-3xl">local_convenience_store</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Xe nước lề đường</h3>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Bán mang đi</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Linh hoạt, tối ưu vốn, tấp nập dân công sở vãng lai</p>
+</div>
+</div>
+<div class="selection-indicator w-7 h-7 rounded-full bg-surface-container-high text-outline flex items-center justify-center">
+<span class="material-symbols-outlined text-sm">radio_button_unchecked</span>
+</div>
+</div>
+<!-- Pros & Cons Grid -->
+<div class="grid grid-cols-2 gap-3 py-3 font-body-sm text-body-sm">
+<div class="bg-secondary-container/30 rounded-xl p-3">
+<div class="flex items-center gap-1.5 font-title-sm text-title-sm text-secondary mb-1.5">
+<span class="material-symbols-outlined text-base">add_circle</span> Ưu điểm (+)
+                </div>
+<ul class="space-y-1 text-on-surface-variant">
+<li class="flex items-start gap-1"><span class="text-secondary font-bold">•</span> Vốn đầu tư thấp, hoàn vốn nhanh</li>
+<li class="flex items-start gap-1"><span class="text-secondary font-bold">•</span> Tính linh hoạt di dời cực cao</li>
+<li class="flex items-start gap-1"><span class="text-secondary font-bold">•</span> Tiếp cận khách vãng lai giờ cao điểm</li>
+</ul>
+</div>
+<div class="bg-error-container/30 rounded-xl p-3">
+<div class="flex items-center gap-1.5 font-title-sm text-title-sm text-danger-red mb-1.5">
+<span class="material-symbols-outlined text-base">remove_circle</span> Nhược điểm (-)
+                </div>
+<ul class="space-y-1 text-on-surface-variant">
+<li class="flex items-start gap-1"><span class="text-danger-red font-bold">•</span> Phụ thuộc thời tiết (mưa tạt, nắng gắt)</li>
+<li class="flex items-start gap-1"><span class="text-danger-red font-bold">•</span> Nguy cơ trật tự đô thị kiểm tra dẹp chỗ</li>
+<li class="flex items-start gap-1"><span class="text-danger-red font-bold">•</span> Không có chỗ ngồi cho khách tâm tình</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Bottom Stat Strip -->
+<div class="pt-3 border-t border-outline-variant/30 flex items-center justify-between bg-surface-container-high/40 -mx-5 -mb-5 px-5 py-3 rounded-b-2xl">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-outline">chair_alt</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sức chứa: <strong>0 chỗ ngồi (Mang đi 100%)</strong></span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-outline">receipt_long</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Chi phí cố định: <strong class="text-secondary">Cực thấp (~1.5tr)</strong></span>
+</div>
+</div>
+</div>
+<!-- Model 2: Quán Nhỏ Trong Hẻm (Active Selected Model) -->
+<div class="model-card group cursor-pointer relative rounded-2xl bg-surface-container-lowest p-5 transition-all duration-200 shadow-2xl ring-4 ring-terracotta flex flex-col justify-between" data-model="alley" data-name="Quán nhỏ trong hẻm" data-rent="15.000.000 đ/tháng">
+<div class="absolute -top-3.5 left-6 px-3.5 py-0.5 rounded-full bg-terracotta text-milk-foam font-label-sm text-label-sm font-bold shadow-md flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs">local_cafe</span> ĐANG CHỌN TRẢI NGHIỆM
+          </div>
+<div>
+<!-- Header of Card -->
+<div class="flex items-start justify-between pb-3 border-b border-outline-variant/30">
+<div class="flex items-center gap-3">
+<div class="w-14 h-14 rounded-2xl bg-tertiary-fixed text-primary flex items-center justify-center shadow-inner">
+<span class="material-symbols-outlined text-3xl">storefront</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary font-bold">Quán nhỏ trong hẻm</h3>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">Trữ tình &amp; Chill</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Bàn gỗ mộc, đèn lồng ấm áp, tiếng nhạc xưa êm dịu</p>
+</div>
+</div>
+<div class="selection-indicator w-7 h-7 rounded-full bg-terracotta text-milk-foam flex items-center justify-center shadow">
+<span class="material-symbols-outlined text-sm font-bold">check</span>
+</div>
+</div>
+<!-- Pros & Cons Grid -->
+<div class="grid grid-cols-2 gap-3 py-3 font-body-sm text-body-sm">
+<div class="bg-secondary-container/30 rounded-xl p-3">
+<div class="flex items-center gap-1.5 font-title-sm text-title-sm text-secondary mb-1.5">
+<span class="material-symbols-outlined text-base">add_circle</span> Ưu điểm (+)
+                </div>
+<ul class="space-y-1 text-on-surface-variant">
+<li class="flex items-start gap-1"><span class="text-secondary font-bold">•</span> Không gian ngồi lại mát mẻ, giữ chân khách</li>
+<li class="flex items-start gap-1"><span class="text-secondary font-bold">•</span> Khách ngồi lâu dễ gọi thêm nước &amp; bánh ngọt</li>
+<li class="flex items-start gap-1"><span class="text-secondary font-bold">•</span> Gây dựng cộng đồng khách quen trung thành</li>
+</ul>
+</div>
+<div class="bg-error-container/30 rounded-xl p-3">
+<div class="flex items-center gap-1.5 font-title-sm text-title-sm text-danger-red mb-1.5">
+<span class="material-symbols-outlined text-base">remove_circle</span> Nhược điểm (-)
+                </div>
+<ul class="space-y-1 text-on-surface-variant">
+<li class="flex items-start gap-1"><span class="text-danger-red font-bold">•</span> Mặt bằng cố định, chịu tiền cọc và tiền nhà</li>
+<li class="flex items-start gap-1"><span class="text-danger-red font-bold">•</span> Chi phí điện thoại, wifi, máy lạnh hàng tháng</li>
+<li class="flex items-start gap-1"><span class="text-danger-red font-bold">•</span> Áp lực doanh thu hòa vốn liên tục</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Bottom Stat Strip -->
+<div class="pt-3 border-t border-outline-variant/30 flex items-center justify-between bg-surface-container-high/40 -mx-5 -mb-5 px-5 py-3 rounded-b-2xl">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-primary">table_restaurant</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sức chứa: <strong>12 - 16 chỗ ngồi (Thưởng thức tại quán)</strong></span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-base text-primary">price_change</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Chi phí cố định: <strong class="text-danger-red">~15.000.000 đ/tháng</strong></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom Pinned Action Bar: Real-time Selection Pill & Flow Action Buttons -->
+<footer class="w-full pt-3 flex items-center justify-between border-t border-milk-foam/20">
+<!-- Active State Pill -->
+<div class="flex items-center gap-3 bg-espresso-dark/85 backdrop-blur-md px-5 py-2.5 rounded-2xl shadow-cozy">
+<div class="w-8 h-8 rounded-full bg-terracotta text-milk-foam flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">coffee</span>
+</div>
+<div class="flex items-center gap-2 text-milk-foam">
+<span class="font-body-sm text-body-sm opacity-75">Cấu hình:</span>
+<span class="font-title-sm text-title-sm text-amber-honey font-bold" id="pill-model-name">Quán nhỏ trong hẻm</span>
+<span class="opacity-40">•</span>
+<span class="font-title-sm text-title-sm text-milk-foam" id="pill-capital-amount">Vốn 100.000.000 đ</span>
+<span class="opacity-40">•</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold" id="pill-bonus-mult">Hệ số x1.5</span>
+</div>
+</div>
+<!-- Navigation CTAs -->
+<div class="flex items-center gap-3">
+<button class="px-5 py-3 rounded-xl bg-surface-container/90 hover:bg-surface-container-high text-primary font-title-sm text-title-sm font-semibold transition-all shadow-sm active:translate-y-0.5 cursor-pointer" id="reset-default-btn" type="button">
+        Mặc định
+      </button>
+<button class="group flex items-center gap-3 px-8 py-3.5 rounded-2xl bg-terracotta hover:bg-terracotta-hover text-milk-foam font-headline-sm text-headline-sm font-bold shadow-cozy active:translate-y-1 transition-all cursor-pointer" id="next-step-btn" type="button">
+<span>Tiếp theo: Chọn chủ đề quán</span>
+<span class="material-symbols-outlined text-2xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</footer>
+<!-- Micro-interactions & Dynamic State Logic -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let currentCapital = '100';
+      let currentCapitalName = '100.000.000 đ';
+      let currentMult = 'x1.5';
+      let currentModel = 'alley';
+      let currentModelName = 'Quán nhỏ trong hẻm';
+
+      const capitalCards = document.querySelectorAll('.capital-card');
+      const modelCards = document.querySelectorAll('.model-card');
+      const pillModelName = document.getElementById('pill-model-name');
+      const pillCapitalAmount = document.getElementById('pill-capital-amount');
+      const pillBonusMult = document.getElementById('pill-bonus-mult');
+      const resetBtn = document.getElementById('reset-default-btn');
+      const nextBtn = document.getElementById('next-step-btn');
+
+      function updatePill() {
+        pillModelName.textContent = currentModelName;
+        pillCapitalAmount.textContent = 'Vốn ' + currentCapitalName;
+        pillBonusMult.textContent = 'Hệ số ' + currentMult;
+      }
+
+      capitalCards.forEach(card => {
+        card.addEventListener('click', () => {
+          capitalCards.forEach(c => {
+            c.classList.remove('ring-4', 'ring-secondary', '-translate-y-1', 'bg-surface-container-lowest', 'shadow-xl');
+            c.classList.add('bg-surface-container-low/95', 'shadow-md');
+            const badge = c.querySelector('.capital-selected-badge');
+            if (badge) badge.remove();
+          });
+
+          card.classList.remove('bg-surface-container-low/95', 'shadow-md');
+          card.classList.add('ring-4', 'ring-secondary', '-translate-y-1', 'bg-surface-container-lowest', 'shadow-xl');
+
+          const newBadge = document.createElement('div');
+          newBadge.className = 'capital-selected-badge absolute -top-3 right-4 px-3 py-0.5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-md';
+          newBadge.innerHTML = '<span class="material-symbols-outlined text-xs">check_circle</span> Đang chọn';
+          card.appendChild(newBadge);
+
+          currentCapital = card.dataset.capital;
+          currentMult = card.dataset.mult;
+          currentCapitalName = currentCapital === '30' ? '30.000.000 đ' : (currentCapital === '100' ? '100.000.000 đ' : '300.000.000 đ');
+          updatePill();
+        });
+      });
+
+      modelCards.forEach(card => {
+        card.addEventListener('click', () => {
+          modelCards.forEach(c => {
+            c.classList.remove('ring-4', 'ring-terracotta', 'shadow-2xl', 'bg-surface-container-lowest');
+            c.classList.add('bg-surface-container-low/95', 'shadow-lg');
+            const ind = c.querySelector('.selection-indicator');
+            if (ind) {
+              ind.className = 'selection-indicator w-7 h-7 rounded-full bg-surface-container-high text-outline flex items-center justify-center';
+              ind.innerHTML = '<span class="material-symbols-outlined text-sm">radio_button_unchecked</span>';
+            }
+            const activeBadge = c.querySelector('.model-active-badge');
+            if (activeBadge) activeBadge.remove();
+          });
+
+          card.classList.remove('bg-surface-container-low/95', 'shadow-lg');
+          card.classList.add('ring-4', 'ring-terracotta', 'shadow-2xl', 'bg-surface-container-lowest');
+
+          const activeBadge = document.createElement('div');
+          activeBadge.className = 'model-active-badge absolute -top-3.5 left-6 px-3.5 py-0.5 rounded-full bg-terracotta text-milk-foam font-label-sm text-label-sm font-bold shadow-md flex items-center gap-1.5';
+          activeBadge.innerHTML = '<span class="material-symbols-outlined text-xs">local_cafe</span> ĐANG CHỌN TRẢI NGHIỆM';
+          card.appendChild(activeBadge);
+
+          const ind = card.querySelector('.selection-indicator');
+          if (ind) {
+            ind.className = 'selection-indicator w-7 h-7 rounded-full bg-terracotta text-milk-foam flex items-center justify-center shadow';
+            ind.innerHTML = '<span class="material-symbols-outlined text-sm font-bold">check</span>';
+          }
+
+          currentModel = card.dataset.model;
+          currentModelName = card.dataset.name;
+          updatePill();
+        });
+      });
+
+      resetBtn.addEventListener('click', () => {
+        const defaultCapital = document.querySelector('[data-capital="100"]');
+        const defaultModel = document.querySelector('[data-model="alley"]');
+        if (defaultCapital) defaultCapital.click();
+        if (defaultModel) defaultModel.click();
+      });
+
+      nextBtn.addEventListener('click', () => {
+        nextBtn.classList.add('scale-95');
+        setTimeout(() => {
+          nextBtn.classList.remove('scale-95');
+          alert(`Đã lưu cấu hình khởi nghiệp:\n• Mô hình: ${currentModelName}\n• Vốn: ${currentCapitalName}\n• Điểm thưởng: ${currentMult}\n\nChuyển sang Bước 2: Chọn phong cách và tên quán!`);
+        }, 150);
+      });
+    });
+  </script>
+</div></main>
+<!-- END: MainUserInterfaceLayer -->
+</div>
+<!-- END: GameViewportContainer -->
+<!-- BEGIN: Interactive Feedback Scripts -->
+<script data-purpose="audio-and-ui-interactions">
+    document.addEventListener('DOMContentLoaded', () => {
+      // Audio toggle button visual feedback
+      const audioBtn = document.querySelector('[data-purpose="audio-toggle-btn"]');
+      let audioEnabled = true;
+      if (audioBtn) {
+        audioBtn.addEventListener('click', () => {
+          audioEnabled = !audioEnabled;
+          const icon = audioBtn.querySelector('i');
+          if (audioEnabled) {
+            icon.className = 'fa-solid fa-music text-xs';
+            audioBtn.classList.remove('opacity-60', 'text-stone-500');
+            audioBtn.classList.add('text-amber-300');
+          } else {
+            icon.className = 'fa-solid fa-music-slash text-xs';
+            audioBtn.classList.add('opacity-60', 'text-stone-500');
+            audioBtn.classList.remove('text-amber-300');
+          }
+        });
+      }
+
+      // Exit button confirmation mock
+      const exitBtn = document.querySelector('[data-purpose="menu-btn-exit"]');
+      if (exitBtn) {
+        exitBtn.addEventListener('click', () => {
+          const confirmed = confirm('Bạn có chắc muốn tạm dừng phiên pha chế và thoát game?');
+          if (confirmed) {
+            console.log('User exited game simulation.');
+          }
+        });
+      }
+    });
+  </script>
+<!-- END: Interactive Feedback Scripts -->
+</body></html>

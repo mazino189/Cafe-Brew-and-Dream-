@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eddfe4db0ef63aa4789b1ef4ef007dcd, type: 3}
+  m_Name: NPC_DatingCouple
+  archetypeId: DatingCouple
+  archetypeName: "C\u1EB7p \u0111\xF4i h\u1EB9n h\xF2"
+  archetypeType: 4
+  personalityDescription: "C\u1EA7n kh\xF4ng gian ri\xEAng t\u01B0, nh\u1EA1c nh\u1EB9 nh\xE0ng, \u0111\u1ED3 u\u1ED1ng ng\u1ECDt ng\xE0o d\u1EC5 u\u1ED1ng, ng\u1ED3i l\xE2u."
+  idealWaitTimeSeconds: 40
+  maxWaitTimeSeconds: 140
+  waitDecayExponent: 1.2
+  strictnessAlpha: 0.9
+  satisfactionThreshold: 60
+  preferredFlavor:
+    sweetness: 0.8
+    bitterness: 0.2
+    creaminess: 0.7
+    aroma: 0.6
+    novelty: 0.4
+  tasteTolerance: 0.4
+  favoriteRecipeIds:
+  - Recipe_TraDaoCamSa
+  - Recipe_BacXiu
+  expectedBudgetVND: 50000
+  priceSensitivityBeta: 0.7
+  weights:
+    speedWeight: 0.1
+    qualityWeight: 0.2
+    attitudeWeight: 0.15
+    hygieneWeight: 0.2
+    ambianceWeight: 0.3
+    priceWeight: 0.05
+  socialType: 0
+  baseReviewProbability: 0.35
+  reputationImpactMultiplier: 1.2
+  visitsToUnlockMiniQuest: 6
+  yarnDialogueNodeName: NPC_DatingCouple_Intro
+

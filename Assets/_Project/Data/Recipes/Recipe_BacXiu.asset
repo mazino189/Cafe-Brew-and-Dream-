@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed74f5b278a1e514994afef00fa9b2cb, type: 3}
+  m_Name: Recipe_BacXiu
+  recipeId: Recipe_BacXiu
+  drinkName: "B\u1EA1c X\u1EC9u 3 T\u1EA7ng S\xE0i G\xF2n"
+  description: "B\u1EA1c x\u1EC9u S\xE0i G\xF2n truy\u1EC1n th\u1ED1ng: s\u1EEFa \u0111\u1EB7c \xD4ng Th\u1ECD, \u0111\xE1 vi\xEAn tinh khi\u1EBFt, s\u1EEFa t\u01B0\u01A1i thanh tr\xF9ng v\xE0 l\u1EDBp c\xE0 ph\xEA phin \u0111\u1EADm \u0111\xE0 tr\xEAn m\u1EB7t."
+  icon: {fileID: 0}
+  referenceMarketPriceVND: 35000
+  idealFlavorProfile:
+    sweetness: 0.75
+    bitterness: 0.45
+    creaminess: 0.7
+    aroma: 0.6
+    novelty: 0.2
+  craftingSteps:
+  - stepDescription: 1. Lấy ly sạch đặt vào quầy
+    actionType: 0
+    requiredIngredientId: Cup_Glass_Medium
+    targetAmount: 1
+    allowedTolerance: 0
+    maxErrorThreshold: 1
+    stepImportance: 1
+    requireStrictOrder: 1
+  - stepDescription: 2. Rót 30ml sữa đặc vào đáy ly
+    actionType: 1
+    requiredIngredientId: ing_condensed_milk
+    targetAmount: 30
+    allowedTolerance: 5
+    maxErrorThreshold: 15
+    stepImportance: 2
+    requireStrictOrder: 1
+  - stepDescription: 3. Xúc 120g đá viên lưng ly
+    actionType: 2
+    requiredIngredientId: ing_ice
+    targetAmount: 120
+    allowedTolerance: 20
+    maxErrorThreshold: 50
+    stepImportance: 1.2
+    requireStrictOrder: 1
+  - stepDescription: 4. Rót 80ml sữa tươi thanh trùng
+    actionType: 1
+    requiredIngredientId: ing_fresh_milk
+    targetAmount: 80
+    allowedTolerance: 10
+    maxErrorThreshold: 25
+    stepImportance: 2
+    requireStrictOrder: 1
+  - stepDescription: 5. Rót 25ml cà phê phin đậm đặc lên tầng mặt
+    actionType: 1
+    requiredIngredientId: ing_phin_coffee
+    targetAmount: 25
+    allowedTolerance: 5
+    maxErrorThreshold: 15
+    stepImportance: 3
+    requireStrictOrder: 1
+  - stepDescription: 6. Khuấy nhẹ tầng trên hoặc đậy nắp hoàn thiện
+    actionType: 4
+    requiredIngredientId: Tool_Stirrer
+    targetAmount: 2
+    allowedTolerance: 1
+    maxErrorThreshold: 4
+    stepImportance: 1
+    requireStrictOrder: 0
+

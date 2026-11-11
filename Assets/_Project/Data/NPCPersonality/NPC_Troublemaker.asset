@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eddfe4db0ef63aa4789b1ef4ef007dcd, type: 3}
+  m_Name: NPC_Troublemaker
+  archetypeId: Troublemaker
+  archetypeName: "Kh\xE1ch h\xE0ng kh\xF3 ch\u1ECBu / Ki\u1EBFm chuy\u1EC7n"
+  archetypeType: 7
+  personalityDescription: "R\u1EA5t thi\u1EBFu ki\xEAn nh\u1EABn, d\u1EC5 c\xE1u g\u1EAFt, \u0111\xF2i h\u1ECFi v\xF4 l\xFD, d\u1EC5 k\xEDch ho\u1EA1t chu\u1ED7i drama b\xF3c ph\u1ED1t."
+  idealWaitTimeSeconds: 15
+  maxWaitTimeSeconds: 45
+  waitDecayExponent: 2.5
+  strictnessAlpha: 2
+  satisfactionThreshold: 80
+  preferredFlavor:
+    sweetness: 0.5
+    bitterness: 0.5
+    creaminess: 0.5
+    aroma: 0.5
+    novelty: 0
+  tasteTolerance: 0.1
+  favoriteRecipeIds:
+  - Recipe_CaPheDen
+  expectedBudgetVND: 20000
+  priceSensitivityBeta: 2.5
+  weights:
+    speedWeight: 0.35
+    qualityWeight: 0.15
+    attitudeWeight: 0.25
+    hygieneWeight: 0.1
+    ambianceWeight: 0.05
+    priceWeight: 0.1
+  socialType: 0
+  baseReviewProbability: 0.95
+  reputationImpactMultiplier: 3.5
+  visitsToUnlockMiniQuest: 8
+  yarnDialogueNodeName: NPC_Troublemaker_Intro
+

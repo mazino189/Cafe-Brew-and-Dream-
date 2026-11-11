@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=Quicksand:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"outline-variant":"#d5c3b9","danger-red":"#C84B31","surface-container-lowest":"#ffffff","surface-container-highest":"#ebe1d3","secondary-fixed":"#baf0b6","inverse-surface":"#353027","on-secondary-fixed-variant":"#215025","error-container":"#ffdad6","secondary":"#39693b","milk-foam":"#FAF6F0","inverse-primary":"#f4ba96","surface-bright":"#fff8f2","tertiary-container":"#7b3904","on-tertiary-fixed":"#321200","outline":"#83746c","surface-container-low":"#fcf2e4","on-surface-variant":"#51443d","on-primary-fixed-variant":"#653d22","tertiary-fixed":"#ffdbc9","on-error":"#ffffff","on-error-container":"#93000a","amber-honey":"#E5A93C","primary-fixed-dim":"#f4ba96","surface-tint":"#805437","on-secondary":"#ffffff","espresso-dark":"#2C1810","surface-dim":"#e2d9cb","on-secondary-fixed":"#002105","surface-container-high":"#f1e7d9","on-tertiary":"#ffffff","surface-container":"#f7edde","surface":"#fff8f2","primary-container":"#6b4226","on-primary-container":"#e9b08c","on-surface":"#1f1b13","secondary-fixed-dim":"#9fd49b","on-tertiary-container":"#ffa873","primary":"#502c12","secondary-container":"#b8edb3","tertiary-fixed-dim":"#ffb68c","inverse-on-surface":"#f9efe1","tertiary":"#5a2600","error":"#ba1a1a","on-background":"#1f1b13","background":"#fff8f2","on-primary":"#ffffff","on-tertiary-fixed-variant":"#753400","on-secondary-container":"#3e6d3e","on-primary-fixed":"#311300","primary-fixed":"#ffdbc7","surface-variant":"#ebe1d3"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter":"1rem","space-lg":"1.5rem","margin-edge":"2rem","space-xs":"0.25rem","space-xl":"2rem","gutter-lg":"1.5rem","space-sm":"0.5rem","space-md":"1rem","margin":"1.5rem"},"fontFamily":{"title-sm":["Be Vietnam Pro"],"title-md":["Be Vietnam Pro"],"label-sm":["Be Vietnam Pro"],"body-lg":["Be Vietnam Pro"],"label-md":["Be Vietnam Pro"],"label-lg":["Be Vietnam Pro"],"body-md":["Be Vietnam Pro"],"body-sm":["Be Vietnam Pro"],"headline-sm":["Quicksand"],"display-hero":["Quicksand"],"headline-lg":["Quicksand"],"headline-md":["Quicksand"]},"fontSize":{"title-sm":["14px",{"lineHeight":"20px","fontWeight":"600"}],"title-md":["16px",{"lineHeight":"24px","fontWeight":"600"}],"label-sm":["10px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"500"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"display-hero":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-lg":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"32px","fontWeight":"600"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col pt-4 pb-6 shadow-[0_1px_8px_rgba(44,24,16,0.06)]"><div class="px-6 mb-5 flex items-center gap-3"><img alt="Brew &amp; Dream Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ALJJyrBVXmTqqVkw9W0gKQ4IG8QjV3_FXAw0MC_qOAb90iajyozjCcVSJusfbWpOHFxGBWmqeRpOdQPjyZi9FCr_iKoipiaolm1E1-wVU-njlJBdmZFHZqvkJWWCI6aQHs06ZqzIkVYhLxOuIRn-RTwzWYjJQcDlJ2WK3OWsWuKYr-v9UlXQ9vSuP6os7okvWJbc4Bwtjca_W-9_ITjxBQ1kxWgXeURRsZFTWxpucONme1PyMA"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary leading-tight">Brew &amp; Dream</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Tiệm Cà Phê Sim</span></div></div><div class="px-4 mb-4"><div class="p-3 rounded-xl bg-surface-container flex items-center justify-between shadow-[0_1px_8px_rgba(44,24,16,0.04)]"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-secondary text-[20px]">store</span><span class="font-title-sm text-title-sm text-on-surface">Quán Phố Cổ</span></div><span class="font-label-md text-label-md bg-secondary-container text-on-secondary-container px-2 py-0.5 rounded-full font-semibold">Cấp 2</span></div></div><nav class="flex-1 px-4 space-y-1 overflow-y-auto" data-active-classes="bg-primary-container text-milk-foam font-title-sm shadow-[0_3px_8px_rgba(44,24,16,0.12)]"><a class="flex items-center px-4 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="quay-thu-ngan-pos" href="#">Quầy Thu Ngân / POS</a><a class="flex items-center px-4 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="kho-nguyen-lieu" href="#">Kho &amp; Nguyên Liệu</a><a class="flex items-center px-4 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="cong-thuc-pha-che" href="#">Công Thức Pha Chế</a><a class="flex items-center px-4 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="nang-cap-quan" href="#">Nâng Cấp Quán</a><a class="flex items-center px-4 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="quan-ly-nhan-vien" href="#">Quản Lý Nhân Viên</a><a class="flex items-center px-4 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="quan-quen-review" href="#">Quán Quen Review</a><a class="flex items-center px-4 py-2.5 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all font-body-md text-body-md" data-path="tong-ket-ngay-14" href="#">Tổng Kết Ngày 14</a></nav><div class="px-4 pt-3 mt-auto border-t border-surface-container-highest/60"><div class="p-3 rounded-xl bg-surface-container-lowest shadow-[0_1px_8px_rgba(44,24,16,0.04)] flex items-center justify-between"><div class="flex items-center gap-2"><span class="material-symbols-outlined text-amber-honey text-[20px]">award_star</span><div><div class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wide">Danh Tiếng</div><div class="font-title-sm text-title-sm text-on-surface">4.8 / 5.0 (Ấm áp)</div></div></div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(44,24,16,0.05)] z-40 flex items-center justify-between px-margin-edge"><div class="flex items-center gap-4"><div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low shadow-[0_1px_6px_rgba(44,24,16,0.03)]"><span class="material-symbols-outlined text-amber-honey text-[18px]">schedule</span><span class="font-title-sm text-title-sm text-on-surface">06:30</span><span class="font-body-sm text-body-sm text-on-surface-variant">- Chuẩn bị mở cửa</span></div><div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-container-low shadow-[0_1px_6px_rgba(44,24,16,0.03)]"><span class="material-symbols-outlined text-secondary text-[18px]">calendar_today</span><span class="font-title-sm text-title-sm text-on-surface">Ngày 14/15</span><span class="font-body-sm text-body-sm text-on-surface-variant">- Chương 1: Khởi đầu</span></div></div><div class="flex items-center gap-3"><div class="flex items-center gap-2.5 px-4 py-1.5 rounded-xl bg-surface-container shadow-[0_1px_8px_rgba(44,24,16,0.04)]"><span class="material-symbols-outlined text-secondary text-[20px]">payments</span><div><span class="font-label-sm text-label-sm text-on-surface-variant block leading-none">Số dư quỹ quán</span><span class="font-headline-sm text-headline-sm text-primary font-bold">14.880.000 đ</span></div></div><button class="p-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all flex items-center justify-center" title="Âm thanh" type="button"><span class="material-symbols-outlined text-[20px]">volume_up</span></button><button class="p-2 rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-all flex items-center justify-center" title="Cài đặt" type="button"><span class="material-symbols-outlined text-[20px]">settings</span></button><div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shadow-[0_1px_6px_rgba(44,24,16,0.12)]"><span class="material-symbols-outlined text-[18px]">person</span></div></div></header><main class="relative pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full pb-28">
+<!-- Top Banner & Shop Progression Status -->
+<section class="px-margin-edge pt-4 pb-6">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-6">
+<div>
+<div class="flex items-center gap-2 mb-1.5">
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase tracking-wider font-semibold">
+            Giai đoạn chuẩn bị • Đêm ngày 14
+          </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px] text-amber-honey" style="font-variation-settings: 'FILL' 1;">bolt</span>
+            Mở rộng năng lực quán
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary">Nâng Cấp Tiệm &amp; Nhân Sự</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-1">
+          Đầu tư máy móc, cải tạo không gian hẻm ấm áp và xây dựng đội ngũ hỗ trợ ca giờ cao điểm trước khi bước sang ngày mới.
+        </p>
+</div>
+<!-- Live Budget & Status Dashboard Pill Matrix -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+<div class="bg-surface-container p-3.5 rounded-xl flex items-center gap-3 shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">account_balance_wallet</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Số Dư Khả Dụng</div>
+<div class="font-headline-sm text-headline-sm text-primary font-bold">14.880.000 đ</div>
+</div>
+</div>
+<div class="bg-surface-container p-3.5 rounded-xl flex items-center gap-3 shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">receipt_long</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Chi Phí Vận Hành</div>
+<div class="font-title-md text-title-md text-on-surface">1.420.000 đ<span class="font-body-sm text-body-sm text-on-surface-variant">/ngày</span></div>
+</div>
+</div>
+<div class="bg-surface-container p-3.5 rounded-xl flex items-center gap-3 shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-amber-honey/20 flex items-center justify-center text-amber-honey">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">deck</span>
+</div>
+<div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">Không Gian Quán</div>
+<div class="font-title-md text-title-md text-on-surface flex items-center gap-1.5">
+              Cấp 2 <span class="font-label-md text-label-md text-on-surface-variant font-normal">(Ấm Cúng)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Navigation Tabs Styled like tactile craft wood/paper tokens -->
+<div class="flex items-center gap-2 p-1.5 bg-surface-container-low rounded-2xl w-fit shadow-inner">
+<button class="flex items-center gap-2.5 px-5 py-2.5 rounded-xl bg-primary text-milk-foam shadow-sm font-title-sm text-title-sm transition-all" id="tab-btn-equip" onclick="switchTab('equip')">
+<span class="material-symbols-outlined text-[20px]">coffee_maker</span>
+<span>Thiết Bị &amp; Nội Thất</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">8 Nâng cấp</span>
+</button>
+<button class="flex items-center gap-2.5 px-5 py-2.5 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-title-sm text-title-sm" id="tab-btn-staff" onclick="switchTab('staff')">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+<span>Tuyển Dụng Nhân Viên</span>
+<span class="bg-secondary-container text-on-secondary-container font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">3 Ứng viên mới</span>
+</button>
+</div>
+</section>
+<!-- Main Multi-Column Interactive Canvas -->
+<section class="px-margin-edge grid grid-cols-1 xl:grid-cols-12 gap-8 items-start">
+<!-- Left / Center Column: Upgrade Marketplace & Inventory (Tabs 1 & 2 container) -->
+<div class="xl:col-span-8 flex flex-col gap-6">
+<!-- View 1: Equipment & Interior Upgrades -->
+<div class="flex flex-col gap-6" id="view-equipments">
+<!-- Sub-filter Pills -->
+<div class="flex flex-wrap items-center justify-between gap-3">
+<div class="flex flex-wrap items-center gap-2" id="filter-chips">
+<button class="px-3.5 py-1.5 rounded-full bg-primary-container text-milk-foam font-label-md text-label-md shadow-sm">Tất cả</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors font-label-md text-label-md">Máy móc &amp; Pha chế</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors font-label-md text-label-md">Không gian &amp; Chỗ ngồi</button>
+<button class="px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:bg-surface-container-high transition-colors font-label-md text-label-md">Tiện ích &amp; Công nghệ</button>
+</div>
+<div class="flex items-center gap-2 font-label-md text-label-md text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+            Hiệu quả kích hoạt tức thì vào Ngày 15
+          </div>
+</div>
+<!-- Upgrade Cards Grid (3 Columns on Large, 2 on Tablet) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<!-- Card 1: Máy Pha Espresso -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl shadow-sm flex flex-col justify-between relative group hover:shadow-md transition-all">
+<div class="flex items-start justify-between gap-3 mb-3">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">coffee_maker</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface leading-tight">Máy Pha Espresso 1 Group</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Công suất: 120 ly / giờ</span>
+</div>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">8.500.000 đ</span>
+</div>
+<!-- Preview Image Placeholder -->
+<div class="w-full h-36 rounded-xl overflow-hidden mb-3 relative bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Chic polished Italian espresso machine on a vintage rustic wooden cafe counter in Hanoi, soft morning ambient light, warm earthy tones, steam rising, highly detailed craft game render" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwFoUfnuKSKUwbh3CICB1rPe1xSGFUidVc2Usz2O9pxjrRBJnHEXp_VpRlcEPH2xnV8jT7vWTgNHvbh87D3vDcUga2c1wkQ9_PeMVEUWXVeqiAzppkoCXbtHUQEUCH2uGULHu0zOEFR7CvthvMIkhGPUXn8F8ERa7ZJEuzmBt3zVrDRlIbjLpCu9XisdWnpDC9IHP8J40K2fonLw_m2j_NYkz0fXMX_r7RY-xCCR_K"/>
+<span class="absolute top-2 left-2 px-2.5 py-1 rounded-lg bg-surface-bright/90 backdrop-blur text-primary font-label-sm text-label-sm font-bold shadow-sm">
+                Thiết Bị Cao Cấp
+              </span>
+</div>
+<!-- Stats Buffs -->
+<div class="space-y-2 mb-4">
+<div class="flex items-center gap-2 text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">speed</span>
+<span>+35% Tốc độ phục vụ ca sáng cao điểm</span>
+</div>
+<div class="flex items-center gap-2 text-primary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">local_cafe</span>
+<span>Mở khóa: Espresso, Americano, Latte Nghệ Thuật</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic bg-surface-container-low p-2 rounded-lg">
+                💡 “Khắc phục hoàn toàn tình trạng Chị Hạnh phải đợi phin nhỏ giọt quá lâu!”
+              </p>
+</div>
+<button class="w-full py-2.5 px-4 rounded-xl bg-primary text-milk-foam font-title-sm text-title-sm flex items-center justify-center gap-2 shadow-sm hover:bg-espresso-dark active:translate-y-0.5 transition-all">
+<span class="material-symbols-outlined text-[20px]">shopping_cart_checkout</span>
+              Nâng Cấp Ngay
+            </button>
+</div>
+<!-- Card 2: Bàn Gỗ Dài & Ổ Điện -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl shadow-sm flex flex-col justify-between relative group hover:shadow-md transition-all">
+<div class="flex items-start justify-between gap-3 mb-3">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">table_restaurant</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface leading-tight">Bàn Gỗ Dài &amp; Ổ Điện Riêng</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Khu vực làm việc / Freelancer</span>
+</div>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">3.200.000 đ</span>
+</div>
+<div class="w-full h-36 rounded-xl overflow-hidden mb-3 relative bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Long warm teakwood study table with multi-socket plugs in a cozy Vietnamese cafe, laptop and iced milk coffee on table, pothos plants draping down, cozy natural sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCelBjU3EY3fMGiRaEXy3oCgN0Y-CGkEcfogaEWRILLo4V9e8889zaon1IJ-B_irm4BDXb_LhDA-Z5LzPD3O8EGDaVG8pcruby4iuovtF6lQJQHH7X3nSYUCu221n5PSW3dytVwgsx8Wziz8--RNyikyBsvAecWWvJxljmsOnj0E0UeS51U6VnLE_ZFds3ghkX3x1-4JQyPseK-BX6IJ00hshIK8TLFwPtoadXPd2gS"/>
+<span class="absolute top-2 left-2 px-2.5 py-1 rounded-lg bg-surface-bright/90 backdrop-blur text-primary font-label-sm text-label-sm font-bold shadow-sm">
+                Nội Thất Quán
+              </span>
+</div>
+<div class="space-y-2 mb-4">
+<div class="flex items-center gap-2 text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">group_add</span>
+<span>+40% Thu hút Sinh viên &amp; Dân văn phòng hẻm</span>
+</div>
+<div class="flex items-center gap-2 text-amber-honey font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">timelapse</span>
+<span>+15% Thời gian lưu khách &amp; Tỷ lệ gọi thêm ly thứ 2</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic bg-surface-container-low p-2 rounded-lg">
+                💡 “Minh Khoa IT và nhóm bạn học sẽ biến quán thành văn phòng thứ hai.”
+              </p>
+</div>
+<button class="w-full py-2.5 px-4 rounded-xl bg-primary text-milk-foam font-title-sm text-title-sm flex items-center justify-center gap-2 shadow-sm hover:bg-espresso-dark active:translate-y-0.5 transition-all">
+<span class="material-symbols-outlined text-[20px]">shopping_cart_checkout</span>
+              Nâng Cấp Ngay
+            </button>
+</div>
+<!-- Card 3: Điều Hòa Inverter (ĐÃ MUA) -->
+<div class="bg-surface-container/60 p-5 rounded-2xl shadow-sm flex flex-col justify-between relative opacity-90">
+<div class="flex items-start justify-between gap-3 mb-3">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[28px]">ac_unit</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface leading-tight">Điều Hòa Inverter &amp; Quạt Phun Sương</h3>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Đã lắp đặt hoàn tất</span>
+</div>
+</div>
+<span class="font-label-md text-label-md px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Đã Sở Hữu
+              </span>
+</div>
+<div class="space-y-2 mb-4 bg-surface-container-lowest p-3 rounded-xl">
+<div class="flex items-center gap-2 text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">sentiment_satisfied</span>
+<span>+25% Hài lòng vào ngày nắng gắt mùa hè</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">energy_savings_leaf</span>
+<span>Tiết kiệm 30% điện năng so với điều hòa cũ</span>
+</div>
+</div>
+<button class="w-full py-2 px-4 rounded-xl bg-surface-container-highest text-on-surface-variant font-title-sm text-title-sm flex items-center justify-center gap-2 cursor-not-allowed" disabled="">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+              Đang Hoạt Động (Cấp 1)
+            </button>
+</div>
+<!-- Card 4: Loa Cổ Điển Nhạc Lo-fi (ĐÃ MUA) -->
+<div class="bg-surface-container/60 p-5 rounded-2xl shadow-sm flex flex-col justify-between relative opacity-90">
+<div class="flex items-start justify-between gap-3 mb-3">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[28px]">speaker</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface leading-tight">Loa Cổ Điển Lo-fi &amp; Acoustic</h3>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">Đã đồng bộ danh sách phát</span>
+</div>
+</div>
+<span class="font-label-md text-label-md px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Đã Sở Hữu
+              </span>
+</div>
+<div class="space-y-2 mb-4 bg-surface-container-lowest p-3 rounded-xl">
+<div class="flex items-center gap-2 text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">mood</span>
+<span>+20% Điểm Không Gian Ấm Cúng &amp; Thư Thái</span>
+</div>
+<div class="flex items-center gap-2 text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span>+10% Tỉ lệ khách quen quay lại đều đặn</span>
+</div>
+</div>
+<button class="w-full py-2 px-4 rounded-xl bg-surface-container-highest text-on-surface-variant font-title-sm text-title-sm flex items-center justify-center gap-2 cursor-not-allowed" disabled="">
+<span class="material-symbols-outlined text-[18px]">music_note</span>
+              Đang Phát: Nhạc Hẻm Chiều Mưa
+            </button>
+</div>
+<!-- Card 5: Góc Check-in Đèn Lồng Phố Cổ -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl shadow-sm flex flex-col justify-between relative group hover:shadow-md transition-all">
+<div class="flex items-start justify-between gap-3 mb-3">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[28px]">photo_camera</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface leading-tight">Góc Check-in Đèn Lồng &amp; Cây Xanh</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Hiệu ứng truyền thông mạng xã hội</span>
+</div>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">2.400.000 đ</span>
+</div>
+<div class="w-full h-36 rounded-xl overflow-hidden mb-3 relative bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Aesthetic cozy corner of a Vietnamese cafe with silk lanterns, terracotta brick walls, vibrant lush monstera leaves and warm fairy lights, cozy film photography vibe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCs38z1u3laZLtQZu0TP1QC4RA3TF1Y314FnDjGCLvWTh2nhZWf1ppDW3NO5v1XFOf8IVxDSg4PsTdQKZgiBjjPbEcOa0Var5TAXCq6QCWDcvGHKjLV9u9WyVMs3cWLXBUJOd3d-Klx7J9RDIiHWDCsxcrLyp7F40brBvQpTbmc1ia58OHj0eH9pLfRflKk2BHGf4M_s-13RNGzx4daqz-80u_m81-oYLpZ4Qg10iz"/>
+<span class="absolute top-2 left-2 px-2.5 py-1 rounded-lg bg-surface-bright/90 backdrop-blur text-primary font-label-sm text-label-sm font-bold shadow-sm">
+                Trang Trí Hút Khách
+              </span>
+</div>
+<div class="space-y-2 mb-4">
+<div class="flex items-center gap-2 text-secondary font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">trending_up</span>
+<span>+30% Tỷ lệ bài viết review có gắn thẻ quán</span>
+</div>
+<div class="flex items-center gap-2 text-amber-honey font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">stars</span>
+<span>Mở khóa cuộc viếng thăm của TikToker Mai Anh</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant italic bg-surface-container-low p-2 rounded-lg">
+                💡 “Những tấm ảnh check-in phin cà phê sẽ kéo theo cả hội bạn trẻ ghé quán.”
+              </p>
+</div>
+<button class="w-full py-2.5 px-4 rounded-xl bg-primary text-milk-foam font-title-sm text-title-sm flex items-center justify-center gap-2 shadow-sm hover:bg-espresso-dark active:translate-y-0.5 transition-all">
+<span class="material-symbols-outlined text-[20px]">shopping_cart_checkout</span>
+              Nâng Cấp Ngay
+            </button>
+</div>
+<!-- Card 6: Tủ Bánh Ngọt Kính Cường Lực (LOCKED) -->
+<div class="bg-surface-container-low/70 p-5 rounded-2xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between gap-3 mb-3 opacity-60">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[28px]">bakery_dining</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-on-surface leading-tight">Tủ Bánh Ngọt Kính Đèn Vàng</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Giữ nhiệt &amp; Bảo quản bánh</span>
+</div>
+</div>
+<span class="font-headline-sm text-headline-sm text-on-surface-variant font-bold">5.500.000 đ</span>
+</div>
+<!-- Lock Overlay Screen -->
+<div class="w-full h-36 rounded-xl bg-surface-container flex flex-col items-center justify-center text-center p-4 mb-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant mb-2 shadow-sm">
+<span class="material-symbols-outlined text-[22px]">lock</span>
+</div>
+<span class="font-title-sm text-title-sm text-on-surface">Chưa Đủ Điều Kiện Mở Khóa</span>
+<span class="font-body-sm text-body-sm text-danger-red font-medium mt-0.5">Yêu cầu: Danh tiếng Quán Cấp 3 (Nổi Tiếng Phố Cổ)</span>
+</div>
+<div class="space-y-2 mb-4 opacity-50">
+<div class="flex items-center gap-2 text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">point_of_sale</span>
+<span>+45% Doanh số kèm bánh sừng bò &amp; Bông lan trứng muối</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+<span>Giảm 50% tỉ lệ bánh hỏng cuối ngày</span>
+</div>
+</div>
+<button class="w-full py-2 px-4 rounded-xl bg-surface-container text-on-surface-variant font-title-sm text-title-sm flex items-center justify-center gap-2 cursor-not-allowed" disabled="">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+              Cần Thêm 120 Điểm Danh Tiếng
+            </button>
+</div>
+</div>
+</div>
+<!-- View 2: Full Staff Candidates Section (Dynamic Tab Target) -->
+<div class="hidden flex-col gap-6" id="view-staff">
+<div class="bg-surface-container-low p-4 rounded-2xl flex items-center justify-between">
+<div>
+<h3 class="font-title-md text-title-md text-primary">Sơ Đồ Nhân Sự Hiện Tại</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Quán đang vận hành với: 1 Quản lý (Bạn) + 1 Barista chính (Chị Hạnh)</p>
+</div>
+<span class="px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md font-semibold">
+            Đang trống: 2 Vị trí ca tối
+          </span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+<!-- Full candidate cards rendered here for Staff Tab switch -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-16 h-16 rounded-2xl overflow-hidden bg-surface-container flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Charming friendly young Vietnamese female student barista with a warm smile, wearing a brown canvas apron, soft cafe lighting, game avatar portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUCJAp2K1rGJI2LnpI3rOBEkX5wXymn279NffuWYVDs53dqPy5iQEQ5DCbL3bEq0w7FFPYqkgQCarb1jXsutq_FwRp0p0bbEbGYBOLlQFWudpXrL9tBSQ1ntfmMt5P6IUcQAGRX5uobMVqEg0YP3n2FhtlvvFWQJRyMn7izVjfsba_ckvr20YBYvBhC2OjdoElv9xd4KZcS4K5m2F3bcLU3h3HUaQ2uU0_L19dE_mJ"/>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h4 class="font-title-md text-title-md text-on-surface">Bé Lan</h4>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">Sinh viên Part-time</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">19 tuổi • Nhanh nhẹn, tươi vui, lễ phép</p>
+<span class="font-title-sm text-title-sm text-primary font-bold">120.000 đ / ca 4 tiếng</span>
+</div>
+</div>
+<div class="space-y-2 mb-4 bg-surface-container-low p-3.5 rounded-xl">
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface-variant">Kỹ năng Pha Chế:</span>
+<span class="font-bold text-on-surface">40% (Cần rèn luyện)</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="bg-amber-honey h-full rounded-full" style="width: 40%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface-variant">Tốc độ Chạy Bàn &amp; Dọn Dẹp:</span>
+<span class="font-bold text-secondary">85% (Rất Nhanh)</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 85%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface-variant">Thái Độ &amp; Làm Hài Lòng Khách:</span>
+<span class="font-bold text-secondary">95% (Xuất Sắc)</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 95%"></div>
+</div>
+</div>
+</div>
+<button class="w-full py-2.5 px-4 rounded-xl bg-secondary text-on-secondary font-title-sm text-title-sm flex items-center justify-center gap-2 shadow-sm hover:opacity-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">how_to_reg</span>
+              Tuyển Dụng Ngay
+            </button>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-2xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-16 h-16 rounded-2xl overflow-hidden bg-surface-container flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Sharp focused young Vietnamese male specialty barista with neat hair, stylish minimalist dark apron, coffee tamper in hand, game character portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbA_-mqzYkV8ANgdkQh2OUb1eAbfO8N8A2BJE0A7Pnd59cWpl-caPMqdDPxBZ_wflkRyywV5ZplJ3DJWCzLvnlCczB3WvwkIEarkktY7itrvHU89gcEvLP_5_QsFZqCD7Ughe2XP6iczQTElPtQ-arjzUrtQSX4wEpAMZJQdW9RGLTJ8vKfFu3yo4P32_7k0Svv-5PbTlNemi8qBIKMF1XYeCWqQQIOmIhln0OMIHL"/>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<h4 class="font-title-md text-title-md text-on-surface">Đức Barista</h4>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Chuyên Nghiệp</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">24 tuổi • Kỹ thuật vững, chuẩn xác, nghiêm túc</p>
+<span class="font-title-sm text-title-sm text-primary font-bold">250.000 đ / ca 4 tiếng</span>
+</div>
+</div>
+<div class="space-y-2 mb-4 bg-surface-container-low p-3.5 rounded-xl">
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface-variant">Kỹ năng Pha Chế &amp; Latte Art:</span>
+<span class="font-bold text-secondary">88% (Điêu Luyện)</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 88%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface-variant">Tốc độ Phục Vụ:</span>
+<span class="font-bold text-on-surface">65% (Kỹ lưỡng)</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="bg-amber-honey h-full rounded-full" style="width: 65%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface-variant">Thái Độ &amp; Giao Tiếp:</span>
+<span class="font-bold text-on-surface">70% (Điềm tĩnh)</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden">
+<div class="bg-amber-honey h-full rounded-full" style="width: 70%"></div>
+</div>
+</div>
+</div>
+<button class="w-full py-2.5 px-4 rounded-xl bg-secondary text-on-secondary font-title-sm text-title-sm flex items-center justify-center gap-2 shadow-sm hover:opacity-95 transition-all">
+<span class="material-symbols-outlined text-[20px]">how_to_reg</span>
+              Tuyển Dụng Ngay
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Sidebar Column: Active Staff Spotlight & Shop Impact Preview -->
+<div class="xl:col-span-4 flex flex-col gap-6">
+<!-- Dedicated Side Drawer: Phỏng Vấn Ứng Viên Ca Giờ Cao Điểm -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl shadow-sm">
+<div class="flex items-center justify-between pb-3 mb-4 border-b border-surface-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">person_search</span>
+<h3 class="font-title-md text-title-md text-on-surface">Ứng Viên Chờ Phỏng Vấn</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2 hồ sơ mới</span>
+</div>
+<div class="space-y-4">
+<!-- Mini Candidate Chit 1: Bé Lan -->
+<div class="p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="flex items-start gap-3 mb-2">
+<div class="w-12 h-12 rounded-xl overflow-hidden bg-surface-container-highest flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Anime stylized warm portrait of Lan, a 19 year old Vietnamese cafe waitress with twin braids and cheerful apron" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlBCclG9qJQuharCV_ip4eHCKX54KuVx2y_43fOH0_Whi45jr8h7R2NWbcWgsvakizIMgJBzgmOnN649Ka_JVULHNjKqaADqsZcwAax2aTy0FKNWytyLKdm4fiV-cQ_R9_03WJ1s4PITA4Kj5HT3ViwireSeBRFtnHye5yrFZJclt-KwgeTPIapPRaGr2e_1VuJoXQazBK3Fo7gJ1uZFdeiZIeRk1gl19iJ2sgYuGe"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<h4 class="font-title-sm text-title-sm text-on-surface truncate">Bé Lan (19t)</h4>
+<span class="font-label-sm text-label-sm text-primary font-bold">120k/ca</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Thu ngân &amp; Chạy bàn</p>
+<div class="flex items-center gap-1 mt-1 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span>Tốc độ + Khách vui vẻ (+95%)</span>
+</div>
+</div>
+</div>
+<!-- Micro Skill Chips -->
+<div class="flex items-center gap-1.5 mb-3">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-sm text-label-sm text-on-surface-variant">Pha chế ★★☆☆☆</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-sm text-label-sm text-secondary font-semibold">Tốc độ ★★★★☆</span>
+</div>
+<button class="w-full py-1.5 px-3 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md flex items-center justify-center gap-1.5 hover:opacity-95 transition-all">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+              Tuyển Vào Ca Sáng (06:30 - 10:30)
+            </button>
+</div>
+<!-- Mini Candidate Chit 2: Đức Barista -->
+<div class="p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container transition-all">
+<div class="flex items-start gap-3 mb-2">
+<div class="w-12 h-12 rounded-xl overflow-hidden bg-surface-container-highest flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Chibi anime avatar of Duc barista, cool focused expression, black headband and coffee latte cup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWa_rkWxh_lh3PmC3A0fcEO3Di0J_ZY-7DeYKvJ7SL5T-G-oqnipRh0nDT3HeKrLHpI-4yOKilyz1jW9rdrU-eBlKaWdFF-7WpfCfekMCXNVKuLSK5UUG4AcUwnmhq2RV4KZRT_0w1OR6_1uAnIkzM6UfLlSEQiGyk5KVo1-fakb1KzTetOzKKb56_Q6V5rY1i5F7toNemaJUF3Z3XncHLa9zxO5s5oJqCG6LJ29Oy"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<h4 class="font-title-sm text-title-sm text-on-surface truncate">Đức Barista (24t)</h4>
+<span class="font-label-sm text-label-sm text-primary font-bold">250k/ca</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Barista kinh nghiệm chuỗi</p>
+<div class="flex items-center gap-1 mt-1 text-primary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">local_cafe</span>
+<span>Chất lượng ly nước hoàn hảo (88%)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-1.5 mb-3">
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-sm text-label-sm text-secondary font-semibold">Pha chế ★★★★☆</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-lowest font-label-sm text-label-sm text-on-surface-variant">Tốc độ ★★★☆☆</span>
+</div>
+<button class="w-full py-1.5 px-3 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md flex items-center justify-center gap-1.5 hover:opacity-95 transition-all">
+<span class="material-symbols-outlined text-[16px]">person_add</span>
+              Tuyển Vào Ca Cao Điểm (11:00 - 15:00)
+            </button>
+</div>
+</div>
+</div>
+<!-- Shop Space & Customer Satisfaction Projected Stats -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl shadow-sm">
+<h3 class="font-title-md text-title-md text-on-surface mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-amber-honey text-[20px]" style="font-variation-settings: 'FILL' 1;">analytics</span>
+          Dự Báo Chỉ Số Ngày 15
+        </h3>
+<!-- Donut / Spark Progress Visualization (Cozy Style) -->
+<div class="bg-surface-container p-4 rounded-xl flex items-center gap-4 mb-4">
+<div class="relative w-16 h-16 flex-shrink-0 flex items-center justify-center">
+<svg class="w-16 h-16 transform -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-highest stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-width="3.5"></path>
+<path class="text-secondary stroke-current" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke-dasharray="82, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<span class="absolute font-headline-sm text-headline-sm font-bold text-primary">82%</span>
+</div>
+<div>
+<div class="font-title-sm text-title-sm text-on-surface">Độ Hài Lòng Dự Kiến</div>
+<div class="font-body-sm text-body-sm text-secondary font-medium">+18% so với Ngày 14</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block mt-0.5">Dựa trên máy móc &amp; nhân sự hiện có</span>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">timer</span> Thời gian chờ trung bình:
+            </span>
+<span class="font-title-sm text-title-sm text-secondary">2.5 phút (-40s)</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">storefront</span> Sức chứa tối đa:
+            </span>
+<span class="font-title-sm text-title-sm text-on-surface">24 chỗ ngồi (+6 bàn)</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-amber-honey">savings</span> Doanh thu kỳ vọng:
+            </span>
+<span class="font-title-sm text-title-sm text-primary font-bold">~ 3.650.000 đ</span>
+</div>
+</div>
+</div>
+<!-- Quick Advice from Shop Mentor -->
+<div class="bg-surface-container-high/60 p-4 rounded-2xl flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary-container text-[22px]">lightbulb</span>
+<div class="text-body-sm font-body-sm text-on-surface">
+<span class="font-title-sm text-title-sm text-tertiary-container block mb-0.5">Lời Khuyên Của Chị Hạnh:</span>
+          “Ngày mai trời dự báo sẽ nắng oi bức, em nên ưu tiên sắm Máy Espresso để bán Americano đá và kiểm tra lại quạt mát trước khi đón khách sáng nhé!”
+        </div>
+</div>
+</div>
+</section>
+<!-- Pinned Sticky Bottom HUD Action Bar -->
+<footer class="fixed bottom-0 left-72 right-0 h-20 bg-surface/95 backdrop-blur-md shadow-2xl z-40 px-margin-edge flex items-center justify-between">
+<!-- Left Navigation -->
+<a class="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-surface-container text-primary font-title-sm text-title-sm hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+      Quay Lại Báo Cáo Ngày 14
+    </a>
+<!-- Center HUD Status Summary -->
+<div class="hidden md:flex items-center gap-6">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-body-md text-body-md text-on-surface">Đã sẵn sàng chuẩn bị cho ca sáng Ngày 15</span>
+</div>
+<div class="h-4 w-px bg-outline-variant"></div>
+<div class="font-title-sm text-title-sm text-on-surface-variant">
+        Tổng chi nâng cấp dự kiến: <span class="text-primary font-bold">0 đ</span>
+</div>
+</div>
+<!-- Right Primary Finalize CTA -->
+<button class="flex items-center gap-2.5 px-6 py-3 rounded-xl bg-primary text-milk-foam font-headline-sm text-headline-sm shadow-md hover:bg-espresso-dark active:translate-y-0.5 transition-all">
+<span>Hoàn Tất &amp; Bắt Đầu Ngày 15</span>
+<span class="material-symbols-outlined text-[22px]">play_arrow</span>
+</button>
+</footer>
+</div>
+<script>
+  function switchTab(tabId) {
+    const viewEquip = document.getElementById('view-equipments');
+    const viewStaff = document.getElementById('view-staff');
+    const btnEquip = document.getElementById('tab-btn-equip');
+    const btnStaff = document.getElementById('tab-btn-staff');
+
+    if (tabId === 'equip') {
+      viewEquip.classList.remove('hidden');
+      viewStaff.classList.add('hidden');
+
+      btnEquip.className = 'flex items-center gap-2.5 px-5 py-2.5 rounded-xl bg-primary text-milk-foam shadow-sm font-title-sm text-title-sm transition-all';
+      btnStaff.className = 'flex items-center gap-2.5 px-5 py-2.5 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-title-sm text-title-sm';
+    } else {
+      viewEquip.classList.add('hidden');
+      viewStaff.classList.remove('hidden');
+
+      btnStaff.className = 'flex items-center gap-2.5 px-5 py-2.5 rounded-xl bg-primary text-milk-foam shadow-sm font-title-sm text-title-sm transition-all';
+      btnEquip.className = 'flex items-center gap-2.5 px-5 py-2.5 rounded-xl text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all font-title-sm text-title-sm';
+    }
+  }
+</script></main></div></body></html>
