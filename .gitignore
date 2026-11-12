@@ -1,26 +1,34 @@
-
 # Unity generated folders
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
-[Ll]ogs/
-[Uu]ser[Ss]ettings/
 [Bb]uild/
 [Bb]uilds/
+[Ll]ogs/
+[Uu]serSettings/
+[Uu]ser[Ss]ettings/
+MemoryCaptures/
+_quarantine/
 
-# IDE
-.vscode/
-.idea/
+# Visual Studio / Rider / VSCode
 .vs/
+.idea/
+.vscode/
 
-# Generated solution files
+# Build and project files
 *.csproj
+*.unityproj
 *.sln
+*.suo
 *.user
+*.userprefs
 *.pidb
 *.booproj
 *.svclog
+*.pdb
+*.opendb
+*.tmp
 
-# OS
+# OS generated
 .DS_Store
 Thumbs.db

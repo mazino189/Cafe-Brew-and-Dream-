@@ -19,7 +19,7 @@ namespace BrewAndDream.EditorTools
         [MenuItem("Tools/Brew & Dream/Generate 8 NPC Personalities (.asset)")]
         public static void GenerateAllNPCPresets()
         {
-            string folderPath = "Assets/_Project/ScriptableObjects/NPCs";
+            string folderPath = "Assets/_Project/Data/NPCPersonalities";
             if (!Directory.Exists(folderPath))
             {
                 Directory.CreateDirectory(folderPath);

@@ -16,7 +16,7 @@ namespace BrewAndDream.ProjectRecovery
         private const string DataRoot = "Assets/_Project/Data";
         private const string RecipesPath = DataRoot + "/Recipes";
         private const string IngredientsPath = DataRoot + "/Ingredients";
-        private const string NPCsPath = DataRoot + "/NPCPersonality";
+        private const string NPCsPath = DataRoot + "/NPCPersonalities";
         private const string TemplateLibPath = DataRoot + "/ReviewTemplateLibrarySO.asset";
 
         [MenuItem("BrewAndDream/Tools/1. Chẩn Đoán Sức Khỏe Project", priority = 1)]
@@ -179,11 +179,14 @@ namespace BrewAndDream.ProjectRecovery
         [InitializeOnLoadMethod]
         private static void AutoRecoverOnLoad()
         {
-            string recipePath = RecipesPath + "/Recipe_BacXiu.asset";
-            if (!File.Exists(recipePath))
+            EditorApplication.delayCall += () =>
             {
-                RecoverAllDataAndBuildSettings();
-            }
+                string recipePath = RecipesPath + "/Recipe_BacXiu.asset";
+                if (!File.Exists(recipePath))
+                {
+                    RecoverAllDataAndBuildSettings();
+                }
+            };
         }
     }
 }
